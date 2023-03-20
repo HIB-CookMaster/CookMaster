@@ -29,10 +29,30 @@ body {
     color: var(--blue-color);
 }
 
+textarea:focus, 
+textarea.form-control:focus, 
+input.form-control:focus, 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 0px 0 rgb(255, 255, 255);
+}
+
 .bg-cover {
     background-size:cover!important;
     background-repeat: no-repeat!important;
     background-position: center;
+}
+
+.bg-newsletter {
+    background: url("../assets/images/bg-newsletter.png");
+    height: 250px;
 }
 
 .bg-image-left {
@@ -41,4 +61,36 @@ body {
 
 .bg-image-right {
     background: url("../assets/images/home/featured-food-right.webp");
+}
+
+.mt-6 {
+    margin-top: 6rem;
+}
+
+.mt-7 {
+    margin-top: 7rem;
+}
+
+.mt-8 {
+    margin-top: 8rem;
+}
+
+.mt-9 {
+    margin-top: 9rem;
+}
+
+.mt-10 {
+    margin-top: 10rem;
+}
+
+
+.card-shadow {
+    background: #FEFEFE;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.position-x-y {
+    top: 36px!important;
+    right: 0px!important;
 }
