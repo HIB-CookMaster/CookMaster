@@ -1,0 +1,44 @@
+body {
+    font-family: 'Roboto', sans-serif!important;
+}
+
+.website-name-font {
+    font-family: 'Lobster', sans-serif!important;
+}
+
+:root {
+    --grey-color: #666666;
+    --green-light-color: #357255;
+    --green-medium-color: #204E3F;
+    --blue-color: #567FCF;
+}
+
+.grey {
+    color: var(--grey-color);
+}
+
+.green-light {
+    color: var(--green-light-color);
+}
+
+.greed-medium {
+    color: var(--green-medium-color);
+}
+
+.blue {
+    color: var(--blue-color);
+}
+
+.bg-cover {
+    background-size:cover!important;
+    background-repeat: no-repeat!important;
+    background-position: center;
+}
+
+.bg-image-left {
+    background: url("../assets/images/home/featured-food-left.webp");
+}
+
+.bg-image-right {
+    background: url("../assets/images/home/featured-food-right.webp");
+}
