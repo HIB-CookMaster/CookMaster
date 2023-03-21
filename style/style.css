@@ -2,6 +2,8 @@ body {
     font-family: 'Roboto', sans-serif!important;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@500&display=swap');
+
 .website-name-font {
     font-family: 'Lobster', sans-serif!important;
 }
@@ -17,6 +19,10 @@ body {
     color: var(--grey-color);
 }
 
+.logo-title {
+    font-family: 'Lobster', cursive;
+}
+
 .green-light {
     color: var(--green-light-color);
 }
@@ -28,6 +34,12 @@ body {
 .blue {
     color: var(--blue-color);
 }
+
+.fs-little {
+    font-size: 12px;
+}
+
+
 
 textarea:focus, 
 textarea.form-control:focus, 

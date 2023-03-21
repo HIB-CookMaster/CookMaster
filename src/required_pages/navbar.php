@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        CookMaster
+        <span class="logo-title fw-bold">CookMaster</span>
         <img src="/CookMaster/assets/images/logo.webp" alt="Logo" width="30" height="24" class="d-inline-block align-text-top ms-2">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,7 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="/CookMaster/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Recipes</a>
@@ -31,10 +31,10 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-right-to-bracket me-2"></i>Sign up</a>
+            <a class="nav-link" href="/CookMaster/src/pages/signup.php"><i class="fa-solid fa-right-to-bracket me-2"></i>Sign up</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-regular fa-user me-2"></i>Login</a>
+            <a class="nav-link" href="/CookMaster/src/pages/login.php"><i class="fa-regular fa-user me-2"></i>Login</a>
           </li>
         </ul>
       </div>
