@@ -1,0 +1,134 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif!important;
+}
+
+.website-name-font {
+    font-family: 'Lobster', sans-serif!important;
+}
+
+:root {
+    --grey-color: #666666;
+    --green-light-color: #357255;
+    --green-medium-color: #204E3F;
+    --blue-color: #567FCF;
+}
+
+p-0 {
+    padding: 0!important;
+}
+
+.grey {
+    color: var(--grey-color);
+}
+
+.logo-title {
+    font-family: 'Lobster', cursive;
+}
+
+.green-light {
+    color: var(--green-light-color);
+}
+
+.greed-medium {
+    color: var(--green-medium-color);
+}
+
+.blue {
+    color: var(--blue-color);
+}
+
+.fs-little {
+    font-size: 12px;
+}
+
+
+
+textarea:focus, 
+textarea.form-control:focus, 
+input.form-control:focus, 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 0px 0 rgb(255, 255, 255);
+}
+
+.bg-cover {
+    background-size:cover!important;
+    background-repeat: no-repeat!important;
+    background-position: center;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.bg-newsletter {
+    background: url("../assets/images/bg-newsletter.png");
+    height: 250px;
+}
+
+.bg-image-left {
+    background: url("../assets/images/home/featured-food-left.webp");
+}
+
+.bg-image-right {
+    background: url("../assets/images/home/featured-food-right.webp");
+}
+
+.mt-6 {
+    margin-top: 6rem;
+}
+
+.mt-7 {
+    margin-top: 7rem;
+}
+
+.mt-8 {
+    margin-top: 8rem;
+}
+
+.mt-9 {
+    margin-top: 9rem;
+}
+
+.mt-10 {
+    margin-top: 10rem;
+}
+
+
+.card-shadow {
+    background: #FEFEFE;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.position-x-y {
+    top: 36px!important;
+    right: 0px!important;
+}
+
+@media only screen and (max-width: 995px) {
+    .temporary-col {
+        display: none!important;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .temporary-col {
+        display: block!important;
+    }
+  }
+
+.pointer {
+    cursor: pointer;
+}
