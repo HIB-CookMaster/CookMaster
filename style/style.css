@@ -1,8 +1,10 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@500&display=swap');
+
 body {
     font-family: 'Roboto', sans-serif!important;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@500&display=swap');
 
 .website-name-font {
     font-family: 'Lobster', sans-serif!important;
@@ -13,6 +15,10 @@ body {
     --green-light-color: #357255;
     --green-medium-color: #204E3F;
     --blue-color: #567FCF;
+}
+
+p-0 {
+    padding: 0!important;
 }
 
 .grey {
@@ -62,6 +68,10 @@ input[type=number]:focus,
     background-position: center;
 }
 
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
 .bg-newsletter {
     background: url("../assets/images/bg-newsletter.png");
     height: 250px;
@@ -105,4 +115,20 @@ input[type=number]:focus,
 .position-x-y {
     top: 36px!important;
     right: 0px!important;
+}
+
+@media only screen and (max-width: 995px) {
+    .temporary-col {
+        display: none!important;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .temporary-col {
+        display: block!important;
+    }
+  }
+
+.pointer {
+    cursor: pointer;
 }

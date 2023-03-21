@@ -1,5 +1,5 @@
 <div class="container-fluid shadow-sm p-3 mb-5 rounded">
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg border-0 shadow-none">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <span class="logo-title fw-bold">CookMaster</span>
@@ -14,13 +14,10 @@
             <a class="nav-link" href="/CookMaster/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Recipes</a>
+            <a class="nav-link" href="/CookMaster/src/pages/list.php">Recipes & Courses</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Courses</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Shop</a>

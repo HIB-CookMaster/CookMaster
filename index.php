@@ -51,7 +51,7 @@
     <div class="container mt-5">
         <div class="row align-items-start d-flex justify-content-center">
             <div class="col-lg-3 col-sm-12 col-md-4 card-shadow py-3 px-3 mb-3 mx-4 mb-4">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/wagyu-beef.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-solid fa-heart px-1 py-1 text-danger"></i>
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-12 col-md-4 card-shadow py-3 px-3 mx-4 mb-4">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/roasted-salmon.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-regular fa-heart px-1 py-1 text-secondary"></i>
@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-12 col-md-4 card-shadow py-3 px-3 mx-4 mb-4">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/pancake.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-regular fa-heart px-1 py-1 text-secondary"></i>
@@ -100,7 +100,7 @@
             </div>
 
             <div class="col-lg-3 col-sm-12 col-md-4 card-shadow py-3 px-3 mb-3 mx-4 mb-4">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/mayonnaise-salad.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-solid fa-heart px-1 py-1 text-danger"></i>
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-12 col-md-4 card-shadow py-3 px-3 mx-4 mb-4">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/chicken-meatballs.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-regular fa-heart px-1 py-1 text-secondary"></i>
@@ -136,7 +136,7 @@
             </div>
 
             <div class="col-lg-3 col-sm-12 col-md-4 card-shadow py-3 px-3 mb-3 mx-4 mb-4">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/fruity-pancake.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-solid fa-heart px-1 py-1 text-danger"></i>
@@ -152,7 +152,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-12 col-md-4 card-shadow py-3 px-3 mx-4 mb-4">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/chicken-rice.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-regular fa-heart px-1 py-1 text-secondary"></i>
@@ -168,7 +168,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-12 col-md-4 card-shadow py-3 px-3 mx-4 mb-4">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/creamy-chicken-pasta.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-regular fa-heart px-1 py-1 text-secondary"></i>
@@ -205,7 +205,7 @@
     <div class="container mt-5">
         <div class="row align-items-start d-flex justify-content-center">
             <div class="col-lg-3 col-sm-6 col-md-4 mb-3">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/tropical-fruit.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-solid fa-heart px-1 py-1 text-danger"></i>
@@ -222,7 +222,7 @@
             </div>
 
             <div class="col-lg-3 col-sm-6 col-md-4 mb-3">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/juicy-wagyu-beef.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-solid fa-heart px-1 py-1 text-danger"></i>
@@ -239,7 +239,7 @@
             </div>
 
             <div class="col-lg-3 col-sm-6 col-md-4 mb-3">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/fired-rice.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-solid fa-heart px-1 py-1 text-danger"></i>
@@ -256,7 +256,7 @@
             </div>
 
             <div class="col-lg-3 col-sm-6 col-md-4 mb-3">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/cauliflower.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-solid fa-heart px-1 py-1 text-danger"></i>
@@ -273,7 +273,7 @@
             </div>
 
             <div class="col-lg-3 col-sm-6 col-md-4 mb-3">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/rainbow-chicken.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-solid fa-heart px-1 py-1 text-danger"></i>
@@ -290,7 +290,7 @@
             </div>
 
             <div class="col-lg-3 col-sm-6 col-md-4 mb-3">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/spicy-sandwichs.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-solid fa-heart px-1 py-1 text-danger"></i>
@@ -307,7 +307,7 @@
             </div>
 
             <div class="col-lg-3 col-sm-6 col-md-4 mb-3">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/firecracker.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-solid fa-heart px-1 py-1 text-danger"></i>
@@ -324,7 +324,7 @@
             </div>
 
             <div class="col-lg-3 col-sm-6 col-md-4 mb-3">
-                <div class="card h-100 border-0">
+                <div class="card h-100 border-0 shadow-none">
                     <img src="./assets/images/home/recipes/chicken-ramen.webp" class="card-img-top" alt="...">
                     <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
                         <i class="fa-solid fa-heart px-1 py-1 text-danger"></i>

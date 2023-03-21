@@ -2,7 +2,7 @@
 <?php require_once "../required_pages/navbar.php" ?>
 
 
-<div class="container height-custom">
+<div class="container">
     <div class="row w-100 ">
         <div class="col-lg-7 col-sm-5 d-flex align-items-center mt-3 mb-3">
             <img class="img-fluid" src="../../assets/images/sign/sign-banner.webp" alt="">
@@ -27,10 +27,20 @@
                         <input type="password" class="form-control" id="password" aria-describedby="passwordHelp">
                     </div>
                 </div>
-                
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="remember">
-                    <label class="form-check-label" for="remember">Remember me</label>
+
+                <div class="row mb-4">
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <!-- Checkbox -->
+                        <div class="form-check mb-3 mb-md-0">
+                            <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+                            <label class="form-check-label" for="loginCheck"> Remember me </label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <!-- Simple link -->
+                        <a href="#!">Forgot password?</a>
+                    </div>
                 </div>
                 <div class="w-100 d-flex justify-content-center">
                     <button type="submit" class="btn btn-primary text-center px-5">Connexion</button>
@@ -39,6 +49,7 @@
         </div>
     </div>
 </div>
+
 
 <div style="margin-top:156px">
     <?php require_once "../required_pages/footer.php" ?>
