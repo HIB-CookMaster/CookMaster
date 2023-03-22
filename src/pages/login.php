@@ -2,7 +2,7 @@
 <?php require_once "../required_pages/navbar.php" ?>
 
 
-<div class="container">
+<div class="container mt-5">
     <div class="row w-100 ">
         <div class="col-lg-7 col-sm-5 d-flex align-items-center mt-3 mb-3">
             <img class="img-fluid" src="../../assets/images/sign/sign-banner.webp" alt="">

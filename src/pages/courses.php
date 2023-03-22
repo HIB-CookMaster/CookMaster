@@ -1,12 +1,12 @@
 <?php require_once "../required_pages/header.php" ?>
 <?php require_once "../required_pages/navbar.php" ?>
 
-<div class="container">
-    <h2 class="fw-bold text-center">Recipes & Courses</h2>
+<div class="container mt-5">
+    <h2 class="fw-bold text-center">Courses</h2>
     <p class="text-center grey mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore</p>
     <div class="d-flex justify-content-center">
-        <form class="d-flex" role="search">
+        <form class="d-flex mt-3" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button type="submit" class="btn btn-dark px-3">Search</button>
         </form>
@@ -14,25 +14,7 @@
 
     <div class="row">
         <div class="col-2 temporary-col"></div>
-        <div class="col">
-
-            <div class="mt-5">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                        value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Recipes</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                        value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Courses</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
-                    <label class="form-check-label" for="inlineRadio3">All</label>
-                </div>
-            </div>
-
+        <div class="col mt-5">
             <div class="card mb-3 border-0 mt-3 pointer shadow-none">
                 <div class="row g-0">
                     <div class="col-md-4">

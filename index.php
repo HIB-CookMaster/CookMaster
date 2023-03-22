@@ -2,7 +2,7 @@
 <?php require_once "./src/required_pages/navbar.php" ?>
 
 
-<div class="container ">
+<div class="container mt-5">
     <div class="container-fluid">
         <div class="row" style="height: 500px">
             <div class="col-md-12 col-lg-6 bg-image-left bg-cover rounded-start-4">

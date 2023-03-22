@@ -1,4 +1,4 @@
-<div class="container-fluid shadow-sm p-3 mb-5 rounded">
+<div class="container-fluid shadow-sm p-3 rounded">
   <nav class="navbar navbar-expand-lg border-0 shadow-none">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -14,7 +14,7 @@
             <a class="nav-link" href="/CookMaster/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/CookMaster/src/pages/list.php">Recipes & Courses</a>
+            <a class="nav-link" href="/CookMaster/src/pages/courses.php">Courses</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Events</a>
@@ -23,7 +23,7 @@
             <a class="nav-link" href="#">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Subscription</a>
+            <a class="nav-link" href="/CookMaster/src/pages/subscription.php">Subscription</a>
           </li>
         </ul>
         <ul class="navbar-nav">
