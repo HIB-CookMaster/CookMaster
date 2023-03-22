@@ -2,7 +2,7 @@
 <?php require_once "../required_pages/navbar.php" ?>
 
 
-<div class="container">
+<div class="container mt-5">
     <h2 class="fw-bold">Health Japanese Fried Rice</h2>
     <div class="p-2 d-flex align-items-center">
         <img style="height: 40px; width: 40px" src="../../assets/images/home/banner-avatar.webp" class="rounded-circle"
