@@ -17,6 +17,10 @@ body {
     --blue-color: #567FCF;
 }
 
+.btn-group:hover {
+    box-shadow: none!important;
+}
+
 p-0 {
     padding: 0!important;
 }
@@ -43,6 +47,14 @@ p-0 {
 
 .fs-little {
     font-size: 12px;
+}
+
+.fs-big {
+    font-size: 65px;
+}
+
+.bg-ocean {
+    background-color: #000B6B !important;
 }
 
 
