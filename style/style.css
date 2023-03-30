@@ -57,7 +57,18 @@ p-0 {
     background-color: #000B6B !important;
 }
 
+.fa-little {
+    font-size: 7px!important;
+}
 
+.px-little {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.bg-today {
+    background-color: #59C3C8;
+}
 
 textarea:focus, 
 textarea.form-control:focus, 
