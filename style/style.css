@@ -17,6 +17,14 @@ body {
     --blue-color: #567FCF;
 }
 
+.top-85 {
+    top: 85%;
+}
+
+.left-85 {
+    left: 85%;
+}
+
 .btn-group:hover {
     box-shadow: none!important;
 }
@@ -149,6 +157,18 @@ input[type=number]:focus,
   @media only screen and (max-width: 767px) {
     .temporary-col {
         display: block!important;
+    }
+  }
+
+  @media only screen and (max-width: 575px) {
+    .nav-profil {
+        display: flex!important;
+        flex-direction: row!important;
+
+    }
+    .nav-cont {
+        margin-bottom: 35px!important;
+        margin-top: 20px!important;
     }
   }
 
