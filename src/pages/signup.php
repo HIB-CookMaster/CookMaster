@@ -37,17 +37,6 @@
 
                 <div class="d-flex mb-3">
                     <div class="px-2 w-100">
-                        <label for="address" class="form-label fw-bold fs-little">Address</label>
-                        <input type="text" class="form-control" id="address" aria-describedby="addressHelp">
-                    </div>
-                    <div class="px-2 w-100">
-                        <label for="zip" class="form-label fw-bold fs-little">Zip</label>
-                        <input type="text" class="form-control" id="zip" aria-describedby="zipHelp">
-                    </div>
-                </div>
-
-                <div class="d-flex mb-3">
-                    <div class="px-2 w-100">
                         <label for="password" class="form-label fw-bold fs-little">Password</label>
                         <input type="password" class="form-control" id="password" aria-describedby="passwordHelp">
                     </div>
@@ -60,7 +49,7 @@
                     <input type="checkbox" class="form-check-input" id="policy">
                     <label class="form-check-label" for="policy">I agree to all the <span class="text-primary-emphasis"> Terms </span>  and <span class="text-primary-emphasis"> Privacy policy  </span> </label>
                 </div>
-                <div class="w-100 d-flex justify-content-center">
+                <div class="w-100 d-flex justify-content-center mb-5">
                     <button type="submit" class="btn btn-primary text-center px-5">Create account</button>
                 </div>
             </form>

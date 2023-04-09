@@ -16,7 +16,7 @@
             <a class="nav-link" href="/CookMaster/">Home</a>
           </li>
           <li class="nav-item">
-          <div class="dropdown">
+            <div class="dropdown">
               <a class="dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Formations
@@ -41,6 +41,7 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Kitchen equipment</a></li>
                 <li><a class="dropdown-item" href="#">Home tutoring</a></li>
+                <li><a class="dropdown-item" href="#">Order to eat</a></li>
               </ul>
             </div>
           </li>
@@ -48,6 +49,8 @@
             <a class="nav-link" href="/CookMaster/src/pages/subscription.php">Subscription</a>
           </li>
         </ul>
+
+        <!-- Disconnected -->
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="/CookMaster/src/pages/signup.php"><i
@@ -56,6 +59,32 @@
           <li class="nav-item">
             <a class="nav-link" href="/CookMaster/src/pages/login.php"><i class="fa-regular fa-user me-2"></i>Login</a>
           </li>
+        <!-- Disconnected -->
+
+
+          <!-- Connected -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink"
+              role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <img src="https://www.pngall.com/wp-content/uploads/2016/05/Man-Download-PNG.png" class="rounded-circle"
+                height="22" alt="Portrait of a Woman" loading="lazy" />
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" href="/CookMaster/src/profil/">My profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Settings</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Logout</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Connected -->
+
+
+
         </ul>
       </div>
     </div>
