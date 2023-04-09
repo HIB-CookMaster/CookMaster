@@ -17,8 +17,8 @@ body {
     --blue-color: #567FCF;
 }
 
-.top-85 {
-    top: 85%;
+.top-70 {
+    top: 70%;
 }
 
 .left-85 {
@@ -143,6 +143,10 @@ input[type=number]:focus,
     border-radius: 30px;
 }
 
+.bg-grey {
+    background-color: #f8f8f8;
+}
+
 .position-x-y {
     top: 36px!important;
     right: 0px!important;
@@ -160,7 +164,8 @@ input[type=number]:focus,
     }
   }
 
-  @media only screen and (max-width: 575px) {
+
+  /* @media only screen and (max-width: 575px) {
     .nav-profil {
         display: flex!important;
         flex-direction: row!important;
@@ -170,7 +175,7 @@ input[type=number]:focus,
         margin-bottom: 35px!important;
         margin-top: 20px!important;
     }
-  }
+  } */
 
 .pointer {
     cursor: pointer;

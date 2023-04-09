@@ -19,7 +19,7 @@
                 <form action="" method="post" class="mt-4">
                     <div class="row">
                         <!-- 2 column grid layout with text inputs for the first and last names -->
-                        <div class="col-6">
+                        <div class="col-lg-6 col-sm-12">
                             <span class="fs-6 opacity-25">Personal</span>
                             <div class="row mb-4 mt-4">
                                 <div class="col">
@@ -47,34 +47,11 @@
                                 <input type="date" id="birth" class="form-control" value="1997-05-22" />
                                 <label class="form-label" for="birth">Date of birth</label>
                             </div>
-
-                            <div class="row mb-4 mt-4">
-                                <div class="col">
-                                    <div class="form-outline">
-                                        <input type="text" id="streetNumber" class="form-control" value="" />
-                                        <label class="form-label" for="streetNumber">N °</label>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="form-outline">
-                                        <input type="text" id="street" class="form-control" value="" />
-                                        <label class="form-label" for="street">Street</label>
-                                    </div>
-                                </div>
-
-                                
-                            </div>
-
-                            <!-- Password input -->
-                            <div class="form-outline mb-4">
-                                <input type="text" id="additional" class="form-control" value="" />
-                                <label class="form-label" for="additional">Additional address</label>
-                            </div>
                         </div>
 
 
                         <!-- 2 column grid layout with text inputs for the first and last names -->
-                        <div class="col-6">
+                        <div class="col-lg-6 col-sm-12">
                             <span class="fs-6 opacity-25">Contact</span>
                             <div class="row mb-4 mt-4">
                                 <div class="col">
@@ -101,6 +78,30 @@
                             <div class="form-outline mb-4">
                                 <input type="text" id="city" class="form-control" value="Paris" />
                                 <label class="form-label" for="city">City</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <span class="fs-6 opacity-25">Address</span>
+                            <div class="row mb-4 mt-4">
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <input type="text" id="streetNumber" class="form-control" value="" />
+                                        <label class="form-label" for="streetNumber">N °</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <input type="text" id="street" class="form-control" value="" />
+                                        <label class="form-label" for="street">Street</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <input type="text" id="additional" class="form-control" value="" />
+                                <label class="form-label" for="additional">Additional address</label>
                             </div>
                         </div>
                     </div>
