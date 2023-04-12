@@ -1,6 +1,6 @@
 <?php require_once "../required_pages/header.php" ?>
 <?php require_once "../required_pages/navbar.php" ?>
-
+<?php require_once "../required_pages/profil-nav.php" ?>
 <style>
     input[type="file"] {
         display: none;
@@ -11,8 +11,7 @@
 
 <div class="container mt-4">
     <div class="row">
-        <?php require ("../required_pages/profil-nav.php") ?>
-        <div class="col-lg-11 col-md-10 col-sm-10 ps-4">
+        <div class="col-12 ps-4">
             <span class="fs-3 opacity-25">Edit Profile</span>
 
             <div class="mt-4">
