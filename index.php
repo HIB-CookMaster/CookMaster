@@ -28,9 +28,9 @@
                             </div>
                         </div>
                         <div class="p-2  d-flex align-items-center ms-auto text-light">
-                            <button type="button"
+                            <a href="./src/pages/course.php"  type="button"
                                 class="btn btn-dark bg-dark px-5 py-2 bg-opacity-75 rounded-4 shadow-sm">View Recipes <i
-                                    class="fa-solid fa-circle-play ms-1"></i></button>
+                                    class="fa-solid fa-circle-play ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -59,9 +59,10 @@
                     </span>
                     <div class="card-body w-100 h-100 mt-1">
                         <h5 class="card-title fw-bold">Big and Juicy Wagyu Beef Cheeseburger</h5>
-                        <div class="mt-4">
-                            <span><i class="fa-solid fa-clock me-2"></i>30 Minutes</span>
-                            <span class="ms-4"><i class="fa-solid fa-utensils me-2"></i>Snack</span>
+                        <div class="mt-4 d-flex justify-content-between">
+                            <span><i class="fa-solid fa-clock me-2"></i><span class="opacity-75">30 Minutes</span></span>
+                            <span class=""><i class="fa-solid fa-utensils me-2"></i><span class="opacity-75">Snack</span></span>
+                            <span class=""><i class="fa-regular fa-star-half-stroke text-warning"><span class="grey opacity-75 fs-little fw-bold">4.7</span></i></span>
                         </div>
                     </div>
                 </div>

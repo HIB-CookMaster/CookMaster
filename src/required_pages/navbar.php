@@ -59,7 +59,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/CookMaster/src/pages/login.php"><i class="fa-regular fa-user me-2"></i>Login</a>
           </li>
-        <!-- Disconnected -->
+          <!-- Disconnected -->
 
 
           <!-- Connected -->
@@ -81,6 +81,45 @@
               </li>
             </ul>
           </li>
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle hidden-arrow" type="button" id="dropdownMenuButton1"
+              data-mdb-toggle="dropdown" aria-expanded="false">
+              <i class="fa-regular fa-bell"></i>
+            </button>
+            <ul class="dropdown-menu p-0" style="width: 400px" aria-labelledby="dropdownMenuButton1">
+              <div class="list-group">
+
+                <!-- Notification -->
+                <a href="#" class="list-group-item list-group-item-action">
+
+                  <div class="row d-flex">
+
+                    <div class="col-2">
+                      <img class="img-fluid rounded-2"
+                        src="https://img.freepik.com/vecteurs-libre/homme-affaires-caractere-avatar-isole_24877-60111.jpg?w=2000"
+                        alt="">
+                    </div>
+
+                    <div class="col-10">
+                      <div class="d-flex justify-content-between h-100 align-items-center">
+                        <h5 class="mb-1">FoodieLand</h5>
+                        <small class="text-body-secondary">8 minutes ago</small>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                  <p class="mb-1 fs-6 grey mt-3">Some placeholder content in a paragraph.</p>
+                  <small class="text-body-secondary fs-little grey opacity-75">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Velit reprehenderit impedit sed facere atque, autem nemo, ea iure dolorum</small>
+                </a>
+                <!-- Notification -->
+
+              </div>
+
+            </ul>
+          </div>
           <!-- Connected -->
 
 
