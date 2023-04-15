@@ -2,9 +2,7 @@
   <nav class="navbar navbar-expand-lg border-0 shadow-none">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <span class="logo-title fw-bold">CookMaster</span>
-        <img src="/CookMaster/assets/images/logo.webp" alt="Logo" width="30" height="24"
-          class="d-inline-block align-text-top ms-2">
+        <span class="logo-title fw-bold">Foodieland<span class="text-danger">.</span></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +39,7 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Kitchen equipment</a></li>
                 <li><a class="dropdown-item" href="#">Home tutoring</a></li>
-                <li><a class="dropdown-item" href="#">Order to eat</a></li>
+                <li><a class="dropdown-item" href="/CookMaster/src/pages/orderToEat.php">Order to eat</a></li>
               </ul>
             </div>
           </li>

@@ -7,10 +7,9 @@
             <img class="img-fluid" src="../../assets/images/sign/sign-banner.webp" alt="">
         </div>
         <div class="col-lg-5 col-sm-7 mt-3 mb-3">
-            <span>
-                <img src="../../assets/images/logo.webp" alt="">
-                <span class="logo-title fw-bold mx-2">CookMaster</span>
-            </span>
+            <div class="mt-4">
+                <span class="logo-title fw-bold mx-2">Foodieland<span class="text-danger">.</span></span>
+            </div>
             <h2 class="fw-bold mt-5 fs-5">Create account</h2>
             <p class="fs-little">Learn with the best</p>
             <form class="mt-5" action="">
