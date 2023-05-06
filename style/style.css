@@ -15,6 +15,7 @@ body {
     --green-light-color: #357255;
     --green-medium-color: #204E3F;
     --blue-color: #567FCF;
+    --green-ultra-light: #0CECA3;
 }
 
 .top-85 {
@@ -43,6 +44,10 @@ p-0 {
 
 .green-light {
     color: var(--green-light-color);
+}
+
+.green-ultra-light {
+    color: var(--green-ultra-light);
 }
 
 .greed-medium {

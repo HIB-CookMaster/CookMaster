@@ -27,11 +27,11 @@
                     BASIC
                 </div>
                 <div class="card-body text-start p-3">
-                    <div class="mt-4 border-bottom pb-3 border-secondary-subtle">
+                    <div class="mt-4 border-bottom pb-3 border-secondary-subtle text-center">
                         <span class="opacity-75">For all individuals and starters who want to start with a simple
                             plan.</span>
                     </div>
-                    <div class="mt-2 border-bottom border-secondary-subtle pb-3">
+                    <div class="mt-2 border-bottom border-secondary-subtle pb-3 text-center">
                         <h2 class="fs-big">Free</h2>
                         <span>Per member, per Month</span>
                     </div>
@@ -80,11 +80,11 @@
                     STARTER
                 </div>
                 <div class="card-body text-start p-3">
-                    <div class="mt-4 border-bottom pb-3 border-secondary-subtle">
+                    <div class="mt-4 border-bottom pb-3 border-secondary-subtle text-center">
                         <span class="opacity-75">For all individuals and starters who want to start with a simple
                             plan.</span>
                     </div>
-                    <div class="mt-2 border-bottom border-secondary-subtle pb-3">
+                    <div class="mt-2 border-bottom border-secondary-subtle pb-3 text-center">
                         <h2 class="fs-big">$9.90</h2>
                         <span class="">Per member, per Month</span>
                     </div>
@@ -136,11 +136,11 @@
                     MASTER
                 </div>
                 <div class="card-body text-start p-3">
-                    <div class="mt-4 border-bottom pb-3 border-secondary-subtle">
+                    <div class="mt-4 border-bottom pb-3 border-secondary-subtle text-center">
                         <span class="opacity-75">For all individuals and starters who want to start with a simple
                             plan.</span>
                     </div>
-                    <div class="mt-2 border-bottom border-secondary-subtle pb-3">
+                    <div class="mt-2 border-bottom border-secondary-subtle pb-3 text-center">
                         <h2 class="fs-big">$19</h2>
                         <span>Per member, per Month</span>
                     </div>

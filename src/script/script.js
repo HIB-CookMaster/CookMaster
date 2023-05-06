@@ -20,4 +20,6 @@ for(let i = 0; i < heartClassList.length; i ++){
 
     })
 }
+// Heart Animation end
+
 
