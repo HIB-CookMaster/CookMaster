@@ -7,7 +7,7 @@
         <div class="col-lg-7 col-sm-5 d-flex align-items-center mt-3 mb-3">
             <img class="img-fluid" src="../../assets/images/sign/sign-banner.webp" alt="">
         </div>
-        <div class="col-lg-5 col-sm-7 mt-3 mb-3">
+        <div class="col-lg-5 col-sm-7 mt-3 mb-3 p-5 card-shadow" style="background-color: white!important">
             <span>
                 <img src="../../assets/images/logo.webp" alt="">
                 <span class="logo-title fw-bold mx-2">CookMaster</span>
