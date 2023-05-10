@@ -219,7 +219,7 @@
     </div>
     <div class="d-flex justify-content-between mt-2 p-3 border-top">
       <button style="background-color: #80B500" type="button" class="btn btn-success rounded-0 border-0 p-3 mt-3" onclick="redirectToCart()">VIEW CART</button>
-      <button type="button" class="btn btn-dark rounded-0 rounded-0 border-0 p-3 mt-3">Checkout</button>
+      <button type="button" class="btn btn-dark rounded-0 rounded-0 border-0 p-3 mt-3" onclick="redirectToCheckout()">Checkout</button>
     </div>
   </div>
 </div>
@@ -229,5 +229,10 @@
 <script>
 function redirectToCart() {
   window.location.href = "/CookMaster/src/pages/cart.php";
+}
+
+
+function redirectToCheckout() {
+  window.location.href = "/CookMaster/src/pages/checkout.php";
 }
 </script>
