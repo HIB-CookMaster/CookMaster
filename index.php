@@ -28,7 +28,7 @@
                             </div>
                         </div>
                         <div class="p-2  d-flex align-items-center ms-auto text-light">
-                            <a href="./src/pages/course.php"  type="button"
+                            <a href="./src/pages/course.php" type="button"
                                 class="btn btn-dark bg-dark px-5 py-2 bg-opacity-75 rounded-4 shadow-sm">View Recipes <i
                                     class="fa-solid fa-circle-play ms-1"></i></a>
                         </div>
@@ -46,7 +46,6 @@
         <p class="text-center">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqut enim ad minim </p>
     </div>
-
     <!-- Card section -->
     <div class="container mt-5">
         <div class="row align-items-start d-flex justify-content-center">
@@ -60,9 +59,12 @@
                     <div class="card-body w-100 h-100 mt-1">
                         <h5 class="card-title fw-bold">Big and Juicy Wagyu Beef Cheeseburger</h5>
                         <div class="mt-4 d-flex justify-content-between">
-                            <span><i class="fa-solid fa-clock me-2"></i><span class="opacity-75">30 Minutes</span></span>
-                            <span class=""><i class="fa-solid fa-utensils me-2"></i><span class="opacity-75">Snack</span></span>
-                            <span class=""><i class="fa-regular fa-star-half-stroke text-warning"><span class="grey opacity-75 fs-little fw-bold">4.7</span></i></span>
+                            <span><i class="fa-solid fa-clock me-2"></i><span class="opacity-75">30
+                                    Minutes</span></span>
+                            <span class=""><i class="fa-solid fa-utensils me-2"></i><span
+                                    class="opacity-75">Snack</span></span>
+                            <span class=""><i class="fa-regular fa-star-half-stroke text-warning"><span
+                                        class="grey opacity-75 fs-little fw-bold">4.7</span></i></span>
                         </div>
                     </div>
                 </div>
@@ -382,7 +384,8 @@
                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt
                     ut labore et dolore magna aliqut enim ad minim </p>
                 <div class="p-2  d-flex align-items-center me-auto  text-light">
-                    <button type="button" class="border-0 btn btn-dark bg-dark px-5 py-2 rounded-4 shadow-sm">Sign up</button>
+                    <button type="button" class="border-0 btn btn-dark bg-dark px-5 py-2 rounded-4 shadow-sm">Sign
+                        up</button>
                 </div>
             </div>
             <div class="col-lg-6">

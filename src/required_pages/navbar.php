@@ -57,6 +57,14 @@
           <li class="nav-item">
             <a class="nav-link" href="/CookMaster/src/pages/login.php"><i class="fa-regular fa-user me-2"></i>Login</a>
           </li>
+
+          <li class="nav-item">
+            <button class="btn btn-primary shadow-0 border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+              <i class="fa-solid fa-cart-shopping text-dark"></i>
+            </button>
+          </li>
+
           <!-- Disconnected -->
 
 
@@ -69,10 +77,10 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li>
-                <a class="dropdown-item" href="/CookMaster/src/profil/">My profile</a>
+                <a class="dropdown-item" href="/CookMaster/src/profil/">Profile</a>
               </li>
               <li>
-                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="#">My cart</a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">Logout</a>
@@ -127,3 +135,99 @@
     </div>
   </nav>
 </div>
+
+
+<!-- Shopping cart -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header border-bottom mx-3">
+    <h5 class="offcanvas-title fs-6" id="offcanvasExampleLabel">Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body mx-3">
+    <div class="d-flex flex-column">
+      <div class="p-2 d-flex align-items-center border-bottom p-3 mt-3">
+        <div class="position-relative">
+          
+          <span class="position-absolute top-0 start-0 translate-middle">
+            <span class="visually-hidden">New alerts</span>
+            <i class="fa-solid fa-xmark border border-light rounded-pill bg-light text-secondary px-1 card-shadow"></i>
+          </span>
+          <img style="height: 70px; width: 70px" src="/CookMaster/assets/images/home/recipes/cauliflower.webp"
+            class=" object-fit-cover rounded-2" alt="...">
+        </div>
+        <div class="ms-3 align-items-start h-100 w-100 justify-content-start">
+          <span class="d-block">Red Hot Tomato</span>
+          <span class="d-block text-secondary-emphasis mt-2">1 x 65.00 €</span>
+        </div>
+      </div>
+
+
+
+      <div class="p-2 d-flex align-items-center border-bottom p-3 mt-3">
+        <div class="position-relative">
+          
+          <span class="position-absolute top-0 start-0 translate-middle">
+            <span class="visually-hidden">New alerts</span>
+            <i class="fa-solid fa-xmark border border-light rounded-pill bg-light text-secondary px-1 card-shadow"></i>
+          </span>
+          <img style="height: 70px; width: 70px" src="/CookMaster/assets/images/home/recipes/cauliflower.webp"
+            class=" object-fit-cover rounded-2" alt="...">
+        </div>
+        <div class="ms-3 align-items-start h-100 w-100 justify-content-start">
+          <span class="d-block">Red Hot Tomato</span>
+          <span class="d-block text-secondary-emphasis mt-2">1 x 65.00 €</span>
+        </div>
+      </div>
+
+
+      <div class="p-2 d-flex align-items-center border-bottom p-3 mt-3">
+        <div class="position-relative">
+          
+          <span class="position-absolute top-0 start-0 translate-middle">
+            <span class="visually-hidden">New alerts</span>
+            <i class="fa-solid fa-xmark border border-light rounded-pill bg-light text-secondary px-1 card-shadow"></i>
+          </span>
+          <img style="height: 70px; width: 70px" src="/CookMaster/assets/images/home/recipes/cauliflower.webp"
+            class=" object-fit-cover rounded-2" alt="...">
+        </div>
+        <div class="ms-3 align-items-start h-100 w-100 justify-content-start">
+          <span class="d-block">Red Hot Tomato</span>
+          <span class="d-block text-secondary-emphasis mt-2">1 x 65.00 €</span>
+        </div>
+      </div>
+
+
+      <div class="p-2 d-flex align-items-center border-bottom p-3 mt-3">
+        <div class="position-relative">
+          
+          <span class="position-absolute top-0 start-0 translate-middle">
+            <span class="visually-hidden">New alerts</span>
+            <i class="fa-solid fa-xmark border border-light rounded-pill bg-light text-secondary px-1 card-shadow"></i>
+          </span>
+          <img style="height: 70px; width: 70px" src="/CookMaster/assets/images/home/recipes/cauliflower.webp"
+            class=" object-fit-cover rounded-2" alt="...">
+        </div>
+        <div class="ms-3 align-items-start h-100 w-100 justify-content-start">
+          <span class="d-block">Red Hot Tomato</span>
+          <span class="d-block text-secondary-emphasis mt-2">1 x 65.00 €</span>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between mt-2 p-3">
+      <span class="fw-bold">Subtotal : </span>
+      <span class="text-success">310 €</span>
+    </div>
+    <div class="d-flex justify-content-between mt-2 p-3 border-top">
+      <button style="background-color: #80B500" type="button" class="btn btn-success rounded-0 border-0 p-3 mt-3" onclick="redirectToCart()">VIEW CART</button>
+      <button type="button" class="btn btn-dark rounded-0 rounded-0 border-0 p-3 mt-3">Checkout</button>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+function redirectToCart() {
+  window.location.href = "/CookMaster/src/pages/cart.php";
+}
+</script>
