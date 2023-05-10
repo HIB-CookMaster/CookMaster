@@ -163,6 +163,12 @@ input[type=number]:focus,
     }
   }
 
+  @media only screen and (max-width: 995px) {
+    .temporary-col-2 {
+        display: none!important;
+    }
+  }
+
   @media only screen and (max-width: 767px) {
     .temporary-col {
         display: block!important;
@@ -189,4 +195,20 @@ input[type=number]:focus,
 
 .close-hover:hover {
     background-color: red;
+}
+
+.custom-coupon {
+    border: none!important;
+    border: 1px solid rgba(0, 0, 0, 0.121)!important;
+}
+
+
+.custom-coupon:focus {
+    outline: none!important;
+    border: 1px solid rgba(89, 255, 0, 0.318)!important;
+}
+
+
+.bg-green {
+    background-color: #80B500!important;
 }
