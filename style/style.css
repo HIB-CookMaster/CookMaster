@@ -185,3 +185,8 @@ input[type=number]:focus,
 .pointer {
     cursor: pointer;
 }
+
+
+.close-hover:hover {
+    background-color: red;
+}
