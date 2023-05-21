@@ -1,8 +1,28 @@
-<div class="container-fluid shadow-sm p-3 rounded">
+<?php
+// Utilise la variable superglobale $_SERVER pour obtenir le chemin du script en cours d'exécution
+$path = $_SERVER['PHP_SELF'];
+
+// Utilise la fonction basename pour obtenir le dernier segment du chemin
+$filename = basename($path, ".php");
+
+// echo $filename;  // Affiche le nom du fichier sans l'extension .php
+
+function checkFileName($filename){
+  if($filename == "myRecipes" || $filename == "orderToEat" || $filename == "index" || $filename == "courses" || $filename == "signup" || $filename == "login" || $filename == "events" || $filename == "subscription"){
+    return true;
+  } else {
+    return false;
+  }
+}
+?>
+
+
+
+<div class="container-fluid shadow-sm p-3 rounded" style="">
   <nav class="navbar navbar-expand-lg border-0 shadow-none">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <span class="logo-title fw-bold">Foodieland<span class="text-danger">.</span></span>
+        <span class="logo-title fw-bold <?php if(!checkFileName($filename)){echo "text-light";} ?>">Foodieland<span class="text-danger">.</span></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,11 +31,11 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/CookMaster/">Home</a>
+            <a class="nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/">Home</a>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <a class="dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown"
+              <a class="dropdown-toggle nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Formations
               </a>
@@ -27,11 +47,11 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/CookMaster/src/pages/events.php">Events</a>
+            <a class="nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/src/pages/events.php">Events</a>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <a class="dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown"
+              <a class="dropdown-toggle nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Shop
               </a>
@@ -44,24 +64,27 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/CookMaster/src/pages/subscription.php">Subscription</a>
+            <a class="nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/src/pages/subscription.php">Subscription</a>
           </li>
         </ul>
 
         <!-- Disconnected -->
         <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link bg-green text-light" href="/CookMaster/src/pages/contact.php">Contact us</a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="/CookMaster/src/pages/signup.php"><i
+            <a class="nav-link <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/src/pages/signup.php"><i
                 class="fa-solid fa-right-to-bracket me-2"></i>Sign up</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/CookMaster/src/pages/login.php"><i class="fa-regular fa-user me-2"></i>Login</a>
+            <a class="nav-link <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/src/pages/login.php"><i class="fa-regular fa-user me-2"></i>Login</a>
           </li>
 
           <li class="nav-item">
             <button class="btn btn-primary shadow-0 border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-              <i class="fa-solid fa-cart-shopping text-dark"></i>
+              <i class="fa-solid fa-cart-shopping <?php if(!checkFileName($filename)){echo "text-light";} else {echo "text-dark";} ?>"></i>
             </button>
           </li>
 
