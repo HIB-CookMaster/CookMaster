@@ -67,14 +67,14 @@
                 </form>
             </div>
             <div class="col-md-7 col-lg-8">
-                <form class="needs-validation" novalidate="">
+                <form method="POST" action="" class="needs-validation" novalidate="">
 
                     <h4 class="mb-3">Payment</h4>
 
                     <div class="row gy-3">
                         <div class="col-md-6">
                             <label for="cc-name" class="form-label">Name on card</label>
-                            <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                            <input type="text" class="form-control" id="cc-name" name="cc-name" placeholder="" required="">
                             <small class="text-body-secondary">Full name as displayed on card</small>
                             <div class="invalid-feedback">
                                 Name on card is required
@@ -83,7 +83,7 @@
 
                         <div class="col-md-6">
                             <label for="cc-number" class="form-label">Credit card number</label>
-                            <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                            <input type="number" class="form-control" id="cc-number" name="cc-number" placeholder="" required="">
                             <div class="invalid-feedback">
                                 Credit card number is required
                             </div>
@@ -91,7 +91,7 @@
 
                         <div class="col-md-3">
                             <label for="cc-expiration" class="form-label">Expiration</label>
-                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                            <input type="text" class="form-control" id="cc-expiration" name="cc-expiration" placeholder="" required="" onkeyup="formatExpirationDate(this)" maxlength="5" placeholder="MM/AA">
                             <div class="invalid-feedback">
                                 Expiration date required
                             </div>
@@ -99,12 +99,15 @@
 
                         <div class="col-md-3">
                             <label for="cc-cvv" class="form-label">CVV</label>
-                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                            <input type="text" class="form-control" id="cc-cvv" name="cc-cvv" placeholder="" required="">
                             <div class="invalid-feedback">
                                 Security code required
                             </div>
                         </div>
                     </div>
+
+                    <!-- Used to display form errors. -->
+                    <div id="card-errors" role="alert"></div>
 
                     <hr class="my-4">
 
@@ -117,6 +120,22 @@
     <br>
     <br>
 </div>
+
+<script>
+    function formatExpirationDate(input) {
+      let value = input.value;
+      // Supprime tous les caractères non numériques
+      value = value.replace(/\D/g, '');
+      
+      // Insère le "/" après les 2 premiers chiffres
+      if (value.length > 2) {
+        value = value.slice(0, 2) + '/' + value.slice(2);
+      }
+      
+      // Met à jour la valeur de l'input
+      input.value = value;
+    }
+  </script>
 
 
 <?php require "../required_pages/footer.php"; ?>

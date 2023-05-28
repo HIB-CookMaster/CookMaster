@@ -1,6 +1,14 @@
 <?php require_once "../required_pages/header.php" ?>
 <?php require_once "../required_pages/navbar.php" ?>
 
+<?php
+
+$address = "Le Comptoir du Relais 9 Carrefour de l'Odéon 75006 Paris";
+$address = str_replace(" ", "+", $address);
+
+
+?>
+
 <div class="container">
     <h2 class="text-center mt-4">Events</h2>
     <span class="opacity-75">
@@ -225,8 +233,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-sm-12 mx-auto mb-3">
-                    <img src="../../assets/images/events/map.png" class="img-fluid rounded-3" alt="">
+                <div class="col-lg-6 col-sm-12 mx-auto mb-3 p-3">
+                    <iframe
+                        width="100%" 
+                        height="100%" 
+                        style="border:0" 
+                        loading="lazy" 
+                        allowfullscreen 
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCjWQlNkcPOZDjbriDy9fNvnIukKt63uwM
+                            &q=<?php echo $address ?>">
+                    </iframe>
                 </div>
             </div>
 
