@@ -58,7 +58,7 @@ function checkFileName($filename){
 
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Kitchen equipment</a></li>
-                <li><a class="dropdown-item" href="#">Home tutoring</a></li>
+                <li><a class="dropdown-item" href="/CookMaster/src/pages/location.php">Location</a></li>
                 <li><a class="dropdown-item" href="/CookMaster/src/pages/orderToEat.php">Order to eat</a></li>
               </ul>
             </div>
