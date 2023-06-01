@@ -13,19 +13,14 @@
 </div>
 
 <div class="container">
-    <div class="row align-items-start d-flex justify-content-center">
-        <div class="col-lg-3 col-sm-12 col-md-4 card-shadow py-3 px-3 mb-3 mx-4 mb-4">
+    <div class="row align-items-start d-flex justify-content-center mt-5">
+        <div class="col-lg-3 col-sm-12 col-md-4 card-shadow mb-3 mx-4 mb-4 p-0">
             <div class="card h-100 border-0 shadow-none">
-                <img src="./assets/images/home/recipes/wagyu-beef.webp" class="card-img-top" alt="...">
-                <span class="position-absolute translate-middle p-2 position-x-y bg-white rounded-pill">
-                    <i class="fa-solid fa-heart px-1 py-1 text-danger"></i>
-                    <span class="visually-hidden">New alerts</span>
-                </span>
+                <img src="/CookMaster/assets/images/location/locale1.jpg" class="card-img-top" alt="...">
                 <div class="card-body w-100 h-100 mt-1">
-                    <h5 class="card-title fw-bold">Big and Juicy Wagyu Beef Cheeseburger</h5>
+                    <h5 class="card-title fw-bold">Blancs Manteaux, Paris 75004</h5>
                     <div class="mt-4 d-flex justify-content-between">
-                        <span><i class="fa-solid fa-clock me-2"></i><span class="opacity-75">30
-                                Minutes</span></span>
+                        <span><i class="fa-solid fa-clock me-2"></i><span class="opacity-75">12 pièces</span></span>
                         <span class=""><i class="fa-solid fa-utensils me-2"></i><span
                                 class="opacity-75">Snack</span></span>
                         <span class=""><i class="fa-regular fa-star-half-stroke text-warning"><span

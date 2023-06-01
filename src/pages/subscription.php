@@ -14,8 +14,6 @@
         <div class="btn-group p-2 rounded-3">
             <a href="#" class="btn border-0 bg-light active text-lowercase"> <span class="text-uppercase">M</span>onthly
                 billing</a>
-            <a href="#" class="btn border-0 text-lowercase opacity-50"><span class="text-uppercase">A</span>nnual
-                billing</a>
         </div>
     </div>
 
