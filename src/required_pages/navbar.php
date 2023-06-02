@@ -53,7 +53,7 @@ function checkFileName($filename){
             <div class="dropdown">
               <a class="dropdown-toggle nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                Shop
+                Services
               </a>
 
               <ul class="dropdown-menu">
