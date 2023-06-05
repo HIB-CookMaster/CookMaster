@@ -228,7 +228,7 @@ $address = str_replace(" ", "+", $address);
                                 <div class="mt-2 opacity-75 text-dark fs-little">From 11:00 am to 12:00 pm</div>
                             </div>
                             <div class="d-flex align-items-center ms-auto pointer">
-                                <div class="text-primary-emphasis me-3"><i class="fa-solid fa-share me-3"></i><span>More infos</span></div>
+                                <div class="text-primary-emphasis me-3"><i class="fa-solid fa-share me-2"></i><span>Join Event</span></div>
                             </div>
                         </div>
                     </div>
@@ -267,7 +267,7 @@ $address = str_replace(" ", "+", $address);
                                 <div class="mt-2 opacity-75 text-dark fs-little">From 11:00 am to 12:00 pm</div>
                             </div>
                             <div class="d-flex align-items-center ms-auto pointer">
-                                <div class="text-primary-emphasis me-3"><i class="fa-solid fa-share me-3"></i><span>More infos</span></div>
+                                <div class="text-primary-emphasis me-3"><i class="fa-solid fa-share me-2"></i><span>Join Event</span></div>
                             </div>
                         </div>
                     </div>
@@ -288,7 +288,7 @@ $address = str_replace(" ", "+", $address);
                                 <div class="mt-2 opacity-75 text-dark fs-little">From 11:00 am to 12:00 pm</div>
                             </div>
                             <div class="d-flex align-items-center ms-auto pointer">
-                                <div class="text-primary-emphasis me-3"><i class="fa-solid fa-share me-3"></i><span>More infos</span></div>
+                                <div class="text-primary-emphasis me-3"><i class="fa-solid fa-share me-2"></i><span>Join Event</span></div>
                             </div>
                         </div>
                     </div>

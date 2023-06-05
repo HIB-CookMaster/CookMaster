@@ -55,7 +55,7 @@
             </div>
 
             <div class="d-flex border-bottom border-secondary-subtle">
-                <div class="p-2 fw-normal">Total Fat</div>
+                <div class="p-2 fw-normal">Glucides</div>
                 <div class="ms-auto p-2 fw-semibold">10.7 g</div>
             </div>
 
@@ -65,20 +65,26 @@
             </div>
 
             <div class="d-flex border-bottom border-secondary-subtle">
-                <div class="p-2 fw-normal">Carbohydrate</div>
+                <div class="p-2 fw-normal">Lipides</div>
                 <div class="ms-auto p-2 fw-semibold">22.3 g</div>
             </div>
 
             <div class="d-flex border-bottom border-secondary-subtle">
-                <div class="p-2 fw-normal">Cholesterol</div>
+                <div class="p-2 fw-normal">Vitamines</div>
                 <div class="ms-auto p-2 fw-semibold">37.4 mg</div>
             </div>
-
-            <div class="d-block mt-auto text-center">
-                <span class=" grey opacity-75">adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. </span>
+            <div class="d-flex border-bottom border-secondary-subtle">
+                <div class="p-2 fw-normal">Minéraux</div>
+                <div class="ms-auto p-2 fw-semibold">37.4 mg</div>
             </div>
-
+            <div class="d-flex border-bottom border-secondary-subtle">
+                <div class="p-2 fw-normal">Fibre</div>
+                <div class="ms-auto p-2 fw-semibold">37.4 mg</div>
+            </div>
+            <div class="d-flex border-bottom border-secondary-subtle">
+                <div class="p-2 fw-normal">Eau</div>
+                <div class="ms-auto p-2 fw-semibold">37.4 mg</div>
+            </div>
         </div>
     </div>
 
