@@ -67,7 +67,7 @@
                 </form>
             </div>
             <div class="col-md-7 col-lg-8">
-                <form method="POST" action="" class="needs-validation" novalidate="">
+                <form method="POST" action="/CookMaster/stripe/stripe.php" class="needs-validation" novalidate="">
 
                     <h4 class="mb-3">Payment</h4>
 
@@ -135,7 +135,9 @@
       // Met à jour la valeur de l'input
       input.value = value;
     }
+
   </script>
+
 
 
 <?php require "../required_pages/footer.php"; ?>
