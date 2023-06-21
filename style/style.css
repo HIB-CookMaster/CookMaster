@@ -72,6 +72,10 @@ p-0 {
     background-color: #000B6B !important;
 }
 
+.bg-dark-blue {
+    background-color: #071C1F!important;
+}
+
 .fa-little {
     font-size: 7px!important;
 }
@@ -213,6 +217,10 @@ input[type=number]:focus,
 
 .bg-green {
     background-color: #80B500!important;
+}
+
+.bg-cream {
+    background-color: #F7F5EB!important;
 }
 
 

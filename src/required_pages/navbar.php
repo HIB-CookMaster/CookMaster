@@ -103,7 +103,7 @@ function checkFileName($filename){
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li>
-                <a class="dropdown-item" href="/CookMaster/src/profil/">Profile</a>
+                <a class="dropdown-item" href="/CookMaster/src/profil/dashboard.php">Profile</a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">My cart</a>
