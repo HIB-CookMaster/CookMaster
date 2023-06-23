@@ -4,6 +4,8 @@ require_once '../vendor/autoload.php';
 
 \Stripe\Stripe::setApiKey('sk_test_51Lb3HfIrHud9qlwW96eWLSn3CdF7pbqJI8Ysy5HTNuma4zOjlfNPA4zTa6g7AVVraTPPNXLhf0CebXugGUDax0xg00Wlom8mXR');
 
+
+
 try {
     $session = \Stripe\Checkout\Session::create([
         'payment_method_types' => ['card'],
