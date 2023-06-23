@@ -16,27 +16,51 @@
     .li-hover:hover {
         background-color: #f8f9fa !important;
     }
-
-    .scroll-forcing {
-        overflow-y: scroll;
-        max-height: 450px;
-    }
 </style>
 
 <div id="container" class="container mt-5">
-    <div class="d-flex justify-content-between w-100">
-        <div class="form-outline w-25">
-            <input type="text" id="certifName" name="certifName" class="form-control" />
-            <label class="form-label" for="form1Example1">Certification name</label>
+    <div id="infos" class="card-shadow p-5">
+        <span class="fs-4 opacity-75">Create a new formation</span>
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <label class="form-label opacity-75" for="thumbnail">Add a thumbnail</label>
+                <input type="file" class="form-control" id="thumbnail" />
+
+                <label class="form-label opacity-75 mt-3" for="difficulty">Select difficulty</label>
+                <select class="form-select" id="difficulty" aria-label="Default select example">
+
+                    <option selected></option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+            <div class="col-lg-6">
+                <label class="form-label opacity-75" for="duration">Formation duration (in hours)</label>
+                <input type="time" class="form-control" id="duration" />
+
+                <label class="form-label opacity-75 mt-3" for="description">Short description</label>
+                <input type="text" class="form-control" id="description" />
+            </div>
+
+            <div class="mt-4">
+                <label class="form-label opacity-75" for="certifName">Formation name</label>
+                <input type="text" id="certifName" name="certifName" class="form-control" />
+            </div>
         </div>
-        <button id="publishBtn" type="btn" class="p-2 px-4 text-light btn btn-success text-end">PUBLISH</button>
+    </div>
+    <br>
+    <hr>
+    <div class="d-flex justify-content-between w-100 mt-5">
+        <div class="d-flex">
+
+            <button id="saveBtn" type="btn" class="p-2 px-4 text-light btn btn-primary text-end mx-4">Save & Add chapter</button>
+            <button id="publishBtn" type="btn" class="p-2 px-4 text-light btn btn-success text-end">PUBLISH</button>
+        </div>
     </div>
     <div class="row mt-3">
         <div class="col-lg-3">
-            <ul class="list-group rounded-0 p-3 scroll-forcing">
-                <li id="saveBtn" class="list-group-item py-3 pointer d-flex justify-content-between my-1 border bg-success rounded-4 mb-3 text-light">
-                    SAVE <i class="fa-solid fa-check"></i>
-                </li>
+            <ul class="list-group rounded-0 p-4 rounded-4">
                 <li id="titleBtn" class="li-hover list-group-item py-3 pointer d-flex justify-content-between my-1 border">
                     Title <i class="fa-solid fa-plus"></i>
                 </li>
@@ -67,7 +91,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-lg-9">
+        <div class="col-lg-9 mt-3 p-4">
             <div class="d-flex flex-column" id="main">
 
             </div>

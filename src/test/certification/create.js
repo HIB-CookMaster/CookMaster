@@ -85,6 +85,7 @@ warningBtn.addEventListener("click", function () {
   createElement("input", "warning");
 });
 
+// subTitle - create input files
 subTitleBtn.addEventListener("click", function () {
   createElement("input", "subTitle");
 });
@@ -135,10 +136,36 @@ quizzBtn.addEventListener("click", function () {
 
 let chapters = [];
 
+
+
+// get all the fields
+const thumbnail = document.getElementById("thumbnail");
+const difficulty = document.getElementById("difficulty");
+const duration = document.getElementById("duration");
+const description = document.getElementById("description");
+const infosContainer = document.getElementById("infos");
+
+// check if all the fields are completed
+const check = document.getElementById("verif");
+check.addEventListener("click", function () {
+  console.log(thumbnail.value);
+  console.log(difficulty.value);
+  console.log(duration.value);
+  console.log(description.value);
+  console.log(certifName.value);
+});
+
+// check if all the fields are completed
+function checkInfos() {
+  if(thumbnail.value === "" || difficulty.value === "" || duration.value === "" || description.value === "") {
+    return true;
+  }
+}
+
 // saveBtn - create JSON
 saveBtn.addEventListener("click", function () {
   let json = [];
-  let elements = document.querySelectorAll("#main > *");
+  let elements = document.querySelectorAll("#main > *"); // get all children of main
   elements.forEach(function (element) {
     let obj = {};
     let type = element.tagName.toLowerCase();
@@ -202,8 +229,8 @@ saveBtn.addEventListener("click", function () {
 
 // publishBtn - send JSON to PHP
 publishBtn.addEventListener("click", function () {
-  if (certifName.value === "") {
-    alert("Please enter a name for your certification");
+  if (certifName.value === "" || checkInfos()) {
+    alert("Please Complete all the fields !");
     console.log(myJsonData);
   } else {
     // Create data object
