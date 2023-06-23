@@ -163,6 +163,11 @@ saveBtn.addEventListener("click", function () {
     // stocker la chaîne JSON dans une variable
     myJsonData += jsonStr + ",";
     console.log(myJsonData);
+
+    // delete all main children
+    while (main.firstChild) {
+        main.removeChild(main.firstChild);
+    }
 });
 
 
@@ -170,6 +175,7 @@ saveBtn.addEventListener("click", function () {
 publishBtn.addEventListener("click", function () {
     if(certifName.value === "") {
         alert("Please enter a name for your certification");
+        console.log(myJsonData);
     }
     else {}
 });
