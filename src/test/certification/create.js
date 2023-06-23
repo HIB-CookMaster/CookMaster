@@ -145,15 +145,6 @@ const duration = document.getElementById("duration");
 const description = document.getElementById("description");
 const infosContainer = document.getElementById("infos");
 
-// check if all the fields are completed
-const check = document.getElementById("verif");
-check.addEventListener("click", function () {
-  console.log(thumbnail.value);
-  console.log(difficulty.value);
-  console.log(duration.value);
-  console.log(description.value);
-  console.log(certifName.value);
-});
 
 // check if all the fields are completed
 function checkInfos() {
@@ -233,11 +224,24 @@ publishBtn.addEventListener("click", function () {
     alert("Please Complete all the fields !");
     console.log(myJsonData);
   } else {
-    // Create data object
-    let data = {
-      jsonData: JSON.stringify(chapters),
+    // Add infos to the JSON
+
+    // Pour toi CHATGPT => J'aimerais que tu rajoute cette objet (infos) dans le JSON
+    let infos = {
+      thumbnail: thumbnail.value,
+      difficulty: difficulty.value,
+      duration: duration.value,
+      description: description.value,
       filename: certifName.value,
     };
+
+
+    // Create data object
+    let data = {
+      jsonData: JSON.stringify(chapters), // add chapters to the data object
+      infos: JSON.stringify(infos), // add infos to the data object
+    };
+    // console.log(data);
 
     // convert data object to JSON
     let jsonData = JSON.stringify(data);
