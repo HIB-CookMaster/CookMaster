@@ -12,8 +12,10 @@ let quizzBtn = document.getElementById("quizzBtn");
 let saveBtn = document.getElementById("saveBtn");
 let publishBtn = document.getElementById("publishBtn");
 let certifName = document.getElementById("certifName");
+const container = document.getElementById("container");
 
-
+// chapter counter
+let chapterCounter = 0;
 
 function createElement(type, cssClass) {
   let elem = document.createElement(`${type}`);
@@ -87,6 +89,7 @@ subTitleBtn.addEventListener("click", function () {
   createElement("input", "subTitle");
 });
 
+// quizz - create input files
 quizzBtn.addEventListener("click", function () {
   let span = document.createElement("span");
   span.setAttribute("class", "quizz");
@@ -130,52 +133,97 @@ quizzBtn.addEventListener("click", function () {
   main.appendChild(ul);
 });
 
+let chapters = [];
 
-let myJsonData = "";
-
+// saveBtn - create JSON
 saveBtn.addEventListener("click", function () {
-    let json = [];
-    let elements = document.querySelectorAll("#main > *");
-    elements.forEach(function (element) {
-        let obj = {};
-        let type = element.tagName.toLowerCase();
-        obj.type = type;
-        obj.class = element.className;
-        obj.content = element.value;
-        if (type === "img" || type === "video") {
-            obj.content = element.src;
-        }
-        if (type === "ul") {
-            let answers = [];
-            let li = element.querySelectorAll("li");
-            li.forEach(function (li) {
-                let answer = {};
-                answer.answer = li.querySelector("input[type=text]").value;
-                answer.correct = li.hasAttribute("data-answer");
-                answers.push(answer);
-            });
-            obj.answers = answers;
-        }
-        json.push(obj);
-    });
-    let jsonStr = JSON.stringify(json, null, 4);
-
-    // stocker la chaîne JSON dans une variable
-    myJsonData += jsonStr + ",";
-    console.log(myJsonData);
-
-    // delete all main children
-    while (main.firstChild) {
-        main.removeChild(main.firstChild);
+  let json = [];
+  let elements = document.querySelectorAll("#main > *");
+  elements.forEach(function (element) {
+    let obj = {};
+    let type = element.tagName.toLowerCase();
+    obj.type = type;
+    obj.class = element.className;
+    obj.content = element.value;
+    if (type === "img" || type === "video") {
+      obj.content = element.src;
     }
+    if (type === "ul") {
+      let answers = [];
+      let li = element.querySelectorAll("li");
+      li.forEach(function (li) {
+        let answer = {};
+        answer.answer = li.querySelector("input[type=text]").value;
+        answer.correct = li.hasAttribute("data-answer");
+        answers.push(answer);
+      });
+      obj.answers = answers;
+    }
+    json.push(obj);
+  });
+
+  // check if there is no children in main
+  if (main.children.length === 0) {
+    alert("Please add content to your chapter");
+  } else {
+    chapterCounter++;
+
+    // create the chapter object
+    let chapterObj = {
+      chapterNumber: chapterCounter,
+      content: json,
+    };
+
+    // add the chapter object to the chapters array
+    chapters.push(chapterObj);
+
+    // reset the main element
+    main.innerHTML = "";
+
+    // create the success message
+    let successMessage = `Chapter created successfully! (${chapterCounter}/${chapterCounter})`;
+    console.log(successMessage);
+
+    // create the div element
+    let div = document.createElement("div");
+    div.setAttribute("class", "alert alert-success mb-4");
+    div.setAttribute("role", "alert");
+    div.innerText = successMessage;
+
+    // add the div to the container element (before the first child)
+    container.insertBefore(div, container.firstChild);
+
+    // remove the div after 1.5 seconds
+    setTimeout(function () {
+      container.removeChild(div);
+    }, 1500);
+  }
 });
 
-
-
+// publishBtn - send JSON to PHP
 publishBtn.addEventListener("click", function () {
-    if(certifName.value === "") {
-        alert("Please enter a name for your certification");
-        console.log(myJsonData);
-    }
-    else {}
+  if (certifName.value === "") {
+    alert("Please enter a name for your certification");
+    console.log(myJsonData);
+  } else {
+    // Create data object
+    let data = {
+      jsonData: JSON.stringify(chapters),
+      filename: certifName.value,
+    };
+
+    // convert data object to JSON
+    let jsonData = JSON.stringify(data);
+
+    // send JSON to PHP
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "/CookMaster/src/test/certification/save.php", true); // open connection
+    xhr.setRequestHeader("Content-Type", "application/json"); // set header
+    xhr.send(jsonData); // send data
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        console.log(xhr.responseText);
+      }
+    };
+  }
 });

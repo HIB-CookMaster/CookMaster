@@ -23,15 +23,15 @@
     }
 </style>
 
-<div class="container mt-5">
+<div id="container" class="container mt-5">
     <div class="d-flex justify-content-between w-100">
-        <div class="form-outline mb-4 w-25">
+        <div class="form-outline w-25">
             <input type="text" id="certifName" name="certifName" class="form-control" />
             <label class="form-label" for="form1Example1">Certification name</label>
         </div>
         <button id="publishBtn" type="btn" class="p-2 px-4 text-light btn btn-success text-end">PUBLISH</button>
     </div>
-    <div class="row mt-5">
+    <div class="row mt-3">
         <div class="col-lg-3">
             <ul class="list-group rounded-0 p-3 scroll-forcing">
                 <li id="saveBtn" class="list-group-item py-3 pointer d-flex justify-content-between my-1 border bg-success rounded-4 mb-3 text-light">
