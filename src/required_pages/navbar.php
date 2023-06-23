@@ -18,7 +18,7 @@ function checkFileName($filename){
 
 
 
-<div class="container-fluid shadow-sm p-3 rounded" style="">
+<div class="container-fluid shadow-sm p-3 rounded">
   <nav class="navbar navbar-expand-lg border-0 shadow-none">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -42,7 +42,7 @@ function checkFileName($filename){
 
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/CookMaster/src/pages/courses.php">Courses</a></li>
-                <li><a class="dropdown-item" href="#">Professional training</a></li>
+                <li><a class="dropdown-item" href="/CookMaster/src/pages/graduate.php">Professional training</a></li>
               </ul>
             </div>
           </li>
