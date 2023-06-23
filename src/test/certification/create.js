@@ -20,8 +20,12 @@ let chapterCounter = 0;
 function createElement(type, cssClass) {
   let elem = document.createElement(`${type}`);
   elem.setAttribute("class", `${cssClass}`);
-  let deleteBtn = document.createElement("btn");
-  deleteBtn.setAttribute("class", "fas fa-trash-alt");
+
+  let deleteBtn = document.createElement("button");
+
+  // Ajoutez la classe 'delete-btn' au bouton de suppression
+  deleteBtn.setAttribute("class", "fas fa-trash-alt delete-btn");
+
   deleteBtn.addEventListener("click", function () {
     elem.remove();
     deleteBtn.remove();
@@ -136,8 +140,6 @@ quizzBtn.addEventListener("click", function () {
 
 let chapters = [];
 
-
-
 // get all the fields
 const thumbnail = document.getElementById("thumbnail");
 const difficulty = document.getElementById("difficulty");
@@ -145,10 +147,14 @@ const duration = document.getElementById("duration");
 const description = document.getElementById("description");
 const infosContainer = document.getElementById("infos");
 
-
 // check if all the fields are completed
 function checkInfos() {
-  if(thumbnail.value === "" || difficulty.value === "" || duration.value === "" || description.value === "") {
+  if (
+    thumbnail.value === "" ||
+    difficulty.value === "" ||
+    duration.value === "" ||
+    description.value === ""
+  ) {
     return true;
   }
 }
@@ -156,28 +162,35 @@ function checkInfos() {
 // saveBtn - create JSON
 saveBtn.addEventListener("click", function () {
   let json = [];
-  let elements = document.querySelectorAll("#main > *"); // get all children of main
+  let elements = document.querySelectorAll("#main > *");
+
   elements.forEach(function (element) {
-    let obj = {};
-    let type = element.tagName.toLowerCase();
-    obj.type = type;
-    obj.class = element.className;
-    obj.content = element.value;
-    if (type === "img" || type === "video") {
-      obj.content = element.src;
+    // Ignore les éléments avec la classe 'delete-btn'
+    if (!element.classList.contains("delete-btn")) {
+      let obj = {};
+      let type = element.tagName.toLowerCase();
+      obj.type = type;
+      obj.class = element.className;
+      obj.content = element.value;
+
+      if (type === "img" || type === "video") {
+        obj.content = element.src;
+      }
+
+      if (type === "ul") {
+        let answers = [];
+        let li = element.querySelectorAll("li");
+        li.forEach(function (li) {
+          let answer = {};
+          answer.answer = li.querySelector("input[type=text]").value;
+          answer.correct = li.hasAttribute("data-answer");
+          answers.push(answer);
+        });
+        obj.answers = answers;
+      }
+
+      json.push(obj);
     }
-    if (type === "ul") {
-      let answers = [];
-      let li = element.querySelectorAll("li");
-      li.forEach(function (li) {
-        let answer = {};
-        answer.answer = li.querySelector("input[type=text]").value;
-        answer.correct = li.hasAttribute("data-answer");
-        answers.push(answer);
-      });
-      obj.answers = answers;
-    }
-    json.push(obj);
   });
 
   // check if there is no children in main
@@ -224,24 +237,21 @@ publishBtn.addEventListener("click", function () {
     alert("Please Complete all the fields !");
     console.log(myJsonData);
   } else {
-    // Add infos to the JSON
-
-    // Pour toi CHATGPT => J'aimerais que tu rajoute cette objet (infos) dans le JSON
+    // Create infos object
     let infos = {
+      certifName: certifName.value,
       thumbnail: thumbnail.value,
       difficulty: difficulty.value,
       duration: duration.value,
       description: description.value,
-      filename: certifName.value,
+      chapters: chapterCounter,
     };
-
 
     // Create data object
     let data = {
-      jsonData: JSON.stringify(chapters), // add chapters to the data object
-      infos: JSON.stringify(infos), // add infos to the data object
+      jsonData: JSON.stringify(chapters),
+      infos: JSON.stringify(infos), // Convert infos into a JSON string
     };
-    // console.log(data);
 
     // convert data object to JSON
     let jsonData = JSON.stringify(data);
