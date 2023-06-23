@@ -23,3 +23,12 @@ for(let i = 0; i < heartClassList.length; i ++){
 // Heart Animation end
 
 
+window.addEventListener('load', function() {
+    var loader = document.getElementById('loader');
+    loader.style.animation = "fadeOut 0.2s linear forwards";
+
+    // Attend 1 seconde pour que l'animation de fondu soit terminée, puis définit le display à none
+    setTimeout(function() {
+        loader.style.display = "none";
+    }, 200);
+});

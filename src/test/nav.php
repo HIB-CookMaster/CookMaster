@@ -47,6 +47,22 @@
                             </li>
                         </ul>
                     </li>
+
+
+                    <li class="nav-item me-3 me-lg-0 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-calendar"></i><span class="ms-2">Certification</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="/CookMaster/src/test/certification/create.php">New formation</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/CookMaster/src/test/certification/list.php">List all formation</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </nav>

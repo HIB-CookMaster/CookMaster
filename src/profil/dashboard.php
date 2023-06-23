@@ -2,6 +2,13 @@
 <?php require_once "../required_pages/navbar.php" ?>
 <?php require_once "./header.php" ?>
 
+<?php
+
+
+
+
+?>
+
 <div class="container mt-5">
     <div class="row mt-5">
         <div class="col-lg-4 mt-5">
@@ -19,6 +26,7 @@
 </div>
 
 <br><br><br><br><br>
+
 
 
 <?php require_once "../required_pages/footer.php" ?>

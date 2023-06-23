@@ -26,6 +26,7 @@
                         <td>9.99€</td>
                         <td class="pointer text-success" onclick="generatePDF()">PDF</td>
                     </tr>
+                    
                 </tbody>
             </table>
         </div>
