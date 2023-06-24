@@ -9,29 +9,33 @@ let importantBtn = document.getElementById("importantBtn");
 let warningBtn = document.getElementById("warningBtn");
 let subTitleBtn = document.getElementById("subTitleBtn");
 let quizzBtn = document.getElementById("quizzBtn");
-let saveBtn = document.getElementById("saveBtn");
 let publishBtn = document.getElementById("publishBtn");
 let certifName = document.getElementById("certifName");
 const container = document.getElementById("container");
 
 // chapter counter
 let chapterCounter = 0;
+let currentChapter = null;
 
 function createElement(type, cssClass) {
   let elem = document.createElement(`${type}`);
   elem.setAttribute("class", `${cssClass}`);
 
   let deleteBtn = document.createElement("button");
-
-  // Ajoutez la classe 'delete-btn' au bouton de suppression
   deleteBtn.setAttribute("class", "fas fa-trash-alt delete-btn");
 
   deleteBtn.addEventListener("click", function () {
     elem.remove();
     deleteBtn.remove();
   });
-  main.appendChild(elem);
-  main.appendChild(deleteBtn);
+
+  if (currentChapter) {
+    currentChapter.appendChild(elem);
+    currentChapter.appendChild(deleteBtn);
+  } else {
+    main.appendChild(elem);
+    main.appendChild(deleteBtn);
+  }
 }
 
 titleBtn.addEventListener("click", function () {
@@ -159,14 +163,30 @@ function checkInfos() {
   }
 }
 
-// saveBtn - create JSON
-saveBtn.addEventListener("click", function () {
-  let json = [];
+// publishBtn - send JSON to PHP
+publishBtn.addEventListener("click", function () {
+  let chapters = [];
+  let currentChapter = [];
+  let chapterName = 1;
+
   let elements = document.querySelectorAll("#main > *");
 
   elements.forEach(function (element) {
-    // Ignore les éléments avec la classe 'delete-btn'
-    if (!element.classList.contains("delete-btn")) {
+    // Ignore les éléments 'i' avec les classes 'fas', 'fa-ellipsis-h', 'mt-3', 'mb-3'
+    // Et aussi ignore les éléments 'button' avec les classes 'fas', 'fa-trash-alt', 'delete-btn'
+    if (
+      (element.tagName.toLowerCase() === "i" &&
+        element.classList.contains("fas") &&
+        element.classList.contains("fa-ellipsis-h") &&
+        element.classList.contains("mt-3") &&
+        element.classList.contains("mb-3")) ||
+      (element.tagName.toLowerCase() === "button" &&
+        element.classList.contains("fas") &&
+        element.classList.contains("fa-trash-alt") &&
+        element.classList.contains("delete-btn"))
+    ) {
+      return; // ignore this iteration
+    } else {
       let obj = {};
       let type = element.tagName.toLowerCase();
       obj.type = type;
@@ -189,53 +209,33 @@ saveBtn.addEventListener("click", function () {
         obj.answers = answers;
       }
 
-      json.push(obj);
+      // If we encounter a chapter delimiter, push the current chapter into the chapters array and start a new one
+      if (element.classList.contains("chapDelim")) {
+        if (currentChapter.length > 0) {
+          chapters.push({
+            name: "Chapitre " + chapterName,
+            data: currentChapter,
+          });
+          currentChapter = [];
+          chapterName++;
+        }
+      } else {
+        // Otherwise, push the object into the current chapter
+        currentChapter.push(obj);
+      }
     }
   });
+
+  // Add the last chapter if it's not empty
+  if (currentChapter.length > 0) {
+    chapters.push({ name: "Chapitre " + chapterName, data: currentChapter });
+  }
 
   // check if there is no children in main
   if (main.children.length === 0) {
     alert("Please add content to your chapter");
-  } else {
-    chapterCounter++;
-
-    // create the chapter object
-    let chapterObj = {
-      chapterNumber: chapterCounter,
-      content: json,
-    };
-
-    // add the chapter object to the chapters array
-    chapters.push(chapterObj);
-
-    // reset the main element
-    main.innerHTML = "";
-
-    // create the success message
-    let successMessage = `Chapter created successfully! (${chapterCounter}/${chapterCounter})`;
-    console.log(successMessage);
-
-    // create the div element
-    let div = document.createElement("div");
-    div.setAttribute("class", "alert alert-success mb-4");
-    div.setAttribute("role", "alert");
-    div.innerText = successMessage;
-
-    // add the div to the container element (before the first child)
-    container.insertBefore(div, container.firstChild);
-
-    // remove the div after 1.5 seconds
-    setTimeout(function () {
-      container.removeChild(div);
-    }, 1500);
-  }
-});
-
-// publishBtn - send JSON to PHP
-publishBtn.addEventListener("click", function () {
-  if (certifName.value === "" || checkInfos()) {
+  } else if (certifName.value === "" || checkInfos()) {
     alert("Please Complete all the fields !");
-    console.log(myJsonData);
   } else {
     // Create infos object
     let infos = {
@@ -267,4 +267,22 @@ publishBtn.addEventListener("click", function () {
       }
     };
   }
+});
+
+const chapDelim = document.getElementById("chapDelim");
+
+chapDelim.addEventListener("click", function () {
+  let div = document.createElement("div");
+  div.setAttribute("class", "chapDelim");
+  main.appendChild(div);
+  chapterCounter++;
+
+  // create the chapter number
+  let i = document.createElement("i");
+  i.innerHTML = ` Chapter ${chapterCounter}`;
+  i.setAttribute("class", "fas fa-ellipsis-h mt-3 mb-3");
+  main.appendChild(i);
+
+  // span element that will contain the chapter number
+  i.setAttribute("data-chapter", chapterCounter);
 });

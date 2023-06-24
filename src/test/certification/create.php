@@ -52,15 +52,16 @@
     <br>
     <hr>
     <div class="d-flex justify-content-between w-100 mt-5">
-        <div class="d-flex">
-
-            <button id="saveBtn" type="btn" class="p-2 px-4 text-light btn btn-primary text-end mx-4">Save & Add chapter</button>
-            <button id="publishBtn" type="btn" class="p-2 px-4 text-light btn btn-success text-end">PUBLISH</button>
+        <div class="d-flex flex-content-end">
+            <button id="publishBtn" type="btn" class="p-2 px-4 text-light btn btn-success text-end">PUBLISH CHAPTER</button>
         </div>
     </div>
     <div class="row mt-3">
         <div class="col-lg-3">
             <ul class="list-group rounded-0 p-4 rounded-4">
+                <li id="chapDelim" class="li-hover list-group-item py-3 pointer d-flex justify-content-between my-1 border">
+                    Chapter Delimiter <i class="fa-solid fa-plus"></i>
+                </li>
                 <li id="titleBtn" class="li-hover list-group-item py-3 pointer d-flex justify-content-between my-1 border">
                     Title <i class="fa-solid fa-plus"></i>
                 </li>
