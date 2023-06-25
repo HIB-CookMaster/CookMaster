@@ -8,7 +8,7 @@ $filename = basename($path, ".php");
 // echo $filename;  // Affiche le nom du fichier sans l'extension .php
 
 function checkFileName($filename){
-  if($filename == "course" ||$filename == "myRecipes" || $filename == "orderToEat" || $filename == "index" || $filename == "courses" || $filename == "signup" || $filename == "login" || $filename == "events" || $filename == "subscription"){
+  if($filename == "course" || $filename == "learn" || $filename == "myRecipes" || $filename == "orderToEat" || $filename == "index" || $filename == "courses" || $filename == "signup" || $filename == "login" || $filename == "events" || $filename == "subscription"){
     return true;
   } else {
     return false;

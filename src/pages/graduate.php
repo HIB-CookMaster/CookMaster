@@ -28,7 +28,7 @@
 </style>
 
 <div class="container mt-5">
-    <div class="card mb-3 shadow-0 border-0 card-box pointer">
+    <div class="card mb-3 shadow-0 border-0 card-box pointer" onclick="window.location.href='./learn.php'">
         <div class="row g-0">
             <div class="col-md-4 p-3">
                 <img src="/CookMaster/assets/images/graduate/thumbnail/sushi-chef.jpg" alt="Trendy Pants and Shoes" class="img-fluid h-100 object-fit-cover" />
