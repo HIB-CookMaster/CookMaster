@@ -170,10 +170,9 @@ publishBtn.addEventListener("click", function () {
   let chapterName = 1;
 
   let elements = document.querySelectorAll("#main > *");
+  let fileCount = 0;
 
   elements.forEach(function (element) {
-    // Ignore les éléments 'i' avec les classes 'fas', 'fa-ellipsis-h', 'mt-3', 'mb-3'
-    // Et aussi ignore les éléments 'button' avec les classes 'fas', 'fa-trash-alt', 'delete-btn'
     if (
       (element.tagName.toLowerCase() === "i" &&
         element.classList.contains("fas") &&
@@ -185,16 +184,17 @@ publishBtn.addEventListener("click", function () {
         element.classList.contains("fa-trash-alt") &&
         element.classList.contains("delete-btn"))
     ) {
-      return; // ignore this iteration
+      return;
     } else {
       let obj = {};
       let type = element.tagName.toLowerCase();
       obj.type = type;
       obj.class = element.className;
-      obj.content = element.value;
 
       if (type === "img" || type === "video") {
         obj.content = element.src;
+      } else {
+        obj.content = element.value;
       }
 
       if (type === "ul") {
@@ -209,7 +209,6 @@ publishBtn.addEventListener("click", function () {
         obj.answers = answers;
       }
 
-      // If we encounter a chapter delimiter, push the current chapter into the chapters array and start a new one
       if (element.classList.contains("chapDelim")) {
         if (currentChapter.length > 0) {
           chapters.push({
@@ -220,24 +219,20 @@ publishBtn.addEventListener("click", function () {
           chapterName++;
         }
       } else {
-        // Otherwise, push the object into the current chapter
         currentChapter.push(obj);
       }
     }
   });
 
-  // Add the last chapter if it's not empty
   if (currentChapter.length > 0) {
     chapters.push({ name: "Chapitre " + chapterName, data: currentChapter });
   }
 
-  // check if there is no children in main
   if (main.children.length === 0) {
     alert("Please add content to your chapter");
   } else if (certifName.value === "" || checkInfos()) {
     alert("Please Complete all the fields !");
   } else {
-    // Create infos object
     let infos = {
       certifName: certifName.value,
       thumbnail: thumbnail.value,
@@ -247,20 +242,24 @@ publishBtn.addEventListener("click", function () {
       chapters: chapterCounter,
     };
 
-    // Create data object
-    let data = {
-      jsonData: JSON.stringify(chapters),
-      infos: JSON.stringify(infos), // Convert infos into a JSON string
-    };
+    let formData = new FormData();
+    formData.append("jsonData", JSON.stringify(chapters));
+    formData.append("infos", JSON.stringify(infos));
 
-    // convert data object to JSON
-    let jsonData = JSON.stringify(data);
+    elements.forEach(function (element) {
+      if (
+        element.tagName.toLowerCase() === "input" &&
+        element.type === "file"
+      ) {
+        formData.append("file_" + fileCount, element.files[0]);
+        fileCount++;
+      }
+    });
 
-    // send JSON to PHP
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "/CookMaster/src/test/certification/save.php", true); // open connection
-    xhr.setRequestHeader("Content-Type", "application/json"); // set header
-    xhr.send(jsonData); // send data
+    xhr.open("POST", "/CookMaster/src/test/certification/save.php", true);
+    xhr.send(formData);
+
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         console.log(xhr.responseText);
