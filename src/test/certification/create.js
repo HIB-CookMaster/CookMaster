@@ -174,7 +174,8 @@ publishBtn.addEventListener("click", function () {
 
   elements.forEach(function (element) {
     if (
-      (element.tagName.toLowerCase() === "i" &&
+      ((element.tagName.toLowerCase() === "input" && element.type === "file") ||
+        element.tagName.toLowerCase() === "i" &&
         element.classList.contains("fas") &&
         element.classList.contains("fa-ellipsis-h") &&
         element.classList.contains("mt-3") &&
