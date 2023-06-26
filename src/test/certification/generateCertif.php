@@ -5,8 +5,6 @@
     $nomDuCertificat = $_POST['certifName'];
     $dateObtention = date("d-m-Y");
 
-    var_dump($prenom, $nom, $nomDuCertificat, $dateObtention);
-
     // Chargez votre image de certificat
     $image = imagecreatefrompng('../../../assets/images/graduate/certifTemplate.png');
 
@@ -15,15 +13,12 @@
 
     // color : grey
     $color = imagecolorallocate($image, 128, 128, 128);
-    
 
     // Définissez le chemin vers votre police
     $font_path_name = '../../../assets/images/graduate/BRUSHSCI.ttf';
     $font_text = '../../../assets/images/graduate/RobotoCondensed-Regular.ttf';
 
     // Ajoutez le texte à votre image
-    // Les numéros sont les coordonnées x et y où le texte commencera
-    // imagettftext($image, $size, $angle, $x, $y, $color, $fontfile, $text);
 
     // Première ligne de texte (nom et prénom)
     $text = $prenom . ' ' . $nom;
@@ -51,8 +46,25 @@
     // Troisième ligne de texte (date d'obtention)
     imagettftext($image, 12, 0, 520, 435, $color, $font_text , $dateObtention);
 
-    // Enregistrez l'image dans un fichier
-    imagepng($image, './uploads/certificat.png');
+    // Indique au navigateur qu'il s'agit d'un fichier à télécharger
+    header('Content-Description: File Transfer');
+
+    // Indique au navigateur le type de fichier
+    header('Content-Type: image/png');
+
+    // Suggère un nom de fichier au navigateur
+    header('Content-Disposition: attachment; filename=certificat.png');
+
+    // Indique que le fichier doit être téléchargé plutôt qu'affiché
+    header('Content-Transfer-Encoding: binary');
+
+    // Indique au navigateur de ne pas mettre en cache les résultats
+    header('Expires: 0');
+    header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+    header('Pragma: public');
+
+    // Affiche l'image directement dans le navigateur
+    imagepng($image);
 
     // Libérez la mémoire
     imagedestroy($image);
