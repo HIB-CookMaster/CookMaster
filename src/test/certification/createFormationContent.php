@@ -11,10 +11,6 @@ if (isset($_COOKIE['formationHeader'])) {
     $certifName = $formationData['certifName'];
 
     // Utilisez les valeurs comme vous le souhaitez
-
-    
-    // Par exemple, affichez la valeur de certifName
-    echo "Formation Name: " . $certifName;
 } else {
     // Le cookie n'existe pas ou a expiré
     echo "Cookie 'formationHeader' not found.";
@@ -44,18 +40,27 @@ if (isset($_COOKIE['formationHeader'])) {
     }
 </style>
 
-<div class="d-flex justify-content-between w-100 mt-5">
-    <div class="d-flex flex-content-end">
-        <button id="publishBtn" type="btn" class="p-2 px-4 text-light btn btn-success text-end">PUBLISH CHAPTER</button>
+
+<div class="container mt-3">
+    <div class="btn-group w-100 position-sticky container" role="group" aria-label="Basic example">
+        <button type="button" class="rounded-0 outline-0 border-0">Chapter Delimiter</button>
+        <button type="button" class="btn btn-primary rounded-0 custom-btn"></button>
+        <button type="button" class="btn btn-primary rounded-0 custom-btn"></button>
+        <button type="button" class="btn btn-primary rounded-0 custom-btn"></button>
+        <button type="button" class="btn btn-primary rounded-0 custom-btn"></button>
+        <button type="button" class="btn btn-primary rounded-0 custom-btn"></button>
+        <button type="button" class="btn btn-primary rounded-0 custom-btn"></button>
+        <button type="button" class="btn btn-primary bg-dark outline-0 rounded-0 border-0"><i class="fa-solid fa-trophy text-warning"></i></button>
     </div>
 </div>
+
+
+
+
 <div class="row mt-3">
-    <div class="col-lg-3">
-        <ul class="list-group rounded-0 p-4 rounded-4">
-            <li id="chapDelim" class="li-hover list-group-item py-3 pointer d-flex justify-content-between my-1 border">
-                Chapter Delimiter <i class="fa-solid fa-plus"></i>
-            </li>
-            <li id="titleBtn" class="li-hover list-group-item py-3 pointer d-flex justify-content-between my-1 border">
+
+
+    <!-- <li id="titleBtn" class="li-hover list-group-item py-3 pointer d-flex justify-content-between my-1 border">
                 Title <i class="fa-solid fa-plus"></i>
             </li>
             <li id="subTitleBtn" class="li-hover list-group-item py-3 pointer d-flex justify-content-between my-1 border">
@@ -82,9 +87,7 @@ if (isset($_COOKIE['formationHeader'])) {
 
             <li id="quizzBtn" class="li-hover list-group-item py-3 pointer d-flex justify-content-between my-1 border">
                 Quizz <i class="fa-solid fa-plus"></i>
-            </li>
-        </ul>
-    </div>
+            </li> -->
     <div class="col-lg-9 mt-3 p-4">
         <div class="d-flex flex-column" id="main">
 
