@@ -61,6 +61,9 @@
                             <li>
                                 <a class="dropdown-item" href="/CookMaster/src/test/certification/list.php">List all formation</a>
                             </li>
+                            <li>
+                                <a class="dropdown-item" href="/CookMaster/src/test/certification/sendDataToCertif.php">Generate Certification</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
