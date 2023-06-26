@@ -56,7 +56,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="/CookMaster/src/test/certification/create.php">New formation</a>
+                                <a class="dropdown-item" href="/CookMaster/src/test/certification/createFormationHeader.php">New formation</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="/CookMaster/src/test/certification/list.php">List all formation</a>
