@@ -26,7 +26,7 @@
         <div class="row mt-4">
             <div class="col-lg-6">
                 <label class="form-label opacity-75" for="thumbnail">Add a thumbnail</label>
-                <input type="file" class="form-control" id="thumbnail" />
+                <input type="file" class="form-control" id="thumbnail" name="thumbnail"/>
                 <label class="form-label opacity-75 mt-3" for="difficulty">Select difficulty</label>
                 <select class="form-select" id="difficulty" aria-label="Default select example">
 

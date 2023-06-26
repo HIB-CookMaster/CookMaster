@@ -52,6 +52,7 @@ imgBtn.addEventListener("click", function () {
   input.setAttribute("type", "file");
   input.setAttribute("accept", "image/*");
   input.setAttribute("class", "img");
+  input.setAttribute("data-isThumbnail", "false");
   input.addEventListener("change", function () {
     let img = document.createElement("img");
     img.setAttribute("src", URL.createObjectURL(input.files[0]));
@@ -146,6 +147,7 @@ let chapters = [];
 
 // get all the fields
 const thumbnail = document.getElementById("thumbnail");
+thumbnail.setAttribute("data-isThumbnail", "true");
 const difficulty = document.getElementById("difficulty");
 const duration = document.getElementById("duration");
 const description = document.getElementById("description");
@@ -174,8 +176,8 @@ publishBtn.addEventListener("click", function () {
 
   elements.forEach(function (element) {
     if (
-      ((element.tagName.toLowerCase() === "input" && element.type === "file") ||
-        element.tagName.toLowerCase() === "i" &&
+      (element.tagName.toLowerCase() === "input" && element.type === "file") ||
+      (element.tagName.toLowerCase() === "i" &&
         element.classList.contains("fas") &&
         element.classList.contains("fa-ellipsis-h") &&
         element.classList.contains("mt-3") &&
@@ -183,10 +185,14 @@ publishBtn.addEventListener("click", function () {
       (element.tagName.toLowerCase() === "button" &&
         element.classList.contains("fas") &&
         element.classList.contains("fa-trash-alt") &&
-        element.classList.contains("delete-btn"))
+        element.classList.contains("delete-btn")) ||
+      element.getAttribute("data-isThumbnail") === "true"
     ) {
       return;
     } else {
+      if (element.getAttribute("data-isThumbnail")) {
+        return;
+      }
       let obj = {};
       let type = element.tagName.toLowerCase();
       obj.type = type;
@@ -194,6 +200,7 @@ publishBtn.addEventListener("click", function () {
 
       if (type === "img" || type === "video") {
         obj.content = element.src;
+        console.log(obj);
       } else {
         obj.content = element.value;
       }
@@ -227,6 +234,8 @@ publishBtn.addEventListener("click", function () {
 
   if (currentChapter.length > 0) {
     chapters.push({ name: "Chapitre " + chapterName, data: currentChapter });
+    currentChapter = [];
+    chapterName++;
   }
 
   if (main.children.length === 0) {
@@ -244,18 +253,25 @@ publishBtn.addEventListener("click", function () {
     };
 
     let formData = new FormData();
-    formData.append("jsonData", JSON.stringify(chapters));
-    formData.append("infos", JSON.stringify(infos));
+    // Ajout de l'image de la miniature à formData
 
+    if (thumbnail.files && thumbnail.files[0]) {
+      formData.append("poire", thumbnail.files[0]);
+    }
+
+    // Ajout des autres fichiers à formData
     elements.forEach(function (element) {
       if (
-        element.tagName.toLowerCase() === "input" &&
-        element.type === "file"
+        element.getAttribute("data-isThumbnail") === "false" &&
+        element.tagName.toLowerCase() === "input"
       ) {
         formData.append("file_" + fileCount, element.files[0]);
         fileCount++;
       }
     });
+
+    formData.append("jsonData", JSON.stringify(chapters));
+    formData.append("infos", JSON.stringify(infos));
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "/CookMaster/src/test/certification/save.php", true);
