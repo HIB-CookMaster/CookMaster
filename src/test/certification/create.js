@@ -17,6 +17,8 @@ const container = document.getElementById("container");
 let chapterCounter = 0;
 let currentChapter = null;
 
+let chapterDiv = null; // Ajout d'une variable pour stocker le conteneur du chapitre actuel
+
 function createElement(type, cssClass) {
   let elem = document.createElement(`${type}`);
   elem.setAttribute("class", `${cssClass}`);
@@ -29,9 +31,9 @@ function createElement(type, cssClass) {
     deleteBtn.remove();
   });
 
-  if (currentChapter) {
-    currentChapter.appendChild(elem);
-    currentChapter.appendChild(deleteBtn);
+  if (chapterDiv) {
+    chapterDiv.appendChild(elem);
+    chapterDiv.appendChild(deleteBtn);
   } else {
     main.appendChild(elem);
     main.appendChild(deleteBtn);
@@ -57,7 +59,19 @@ imgBtn.addEventListener("click", function () {
     let img = document.createElement("img");
     img.setAttribute("src", URL.createObjectURL(input.files[0]));
     img.setAttribute("class", "img");
+
+    let deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.setAttribute("class", "delete-btn");
+
+    deleteBtn.addEventListener("click", function () {
+      img.remove();
+      input.remove();
+      deleteBtn.remove();
+    });
+
     main.appendChild(img);
+    main.appendChild(deleteBtn);
   });
   main.appendChild(input);
 });
@@ -74,7 +88,19 @@ videoBtn.addEventListener("click", function () {
     video.setAttribute("class", "video");
     video.autoplay = false;
     video.controls = true;
+
+    let deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.setAttribute("class", "delete-btn");
+
+    deleteBtn.addEventListener("click", function () {
+      video.remove();
+      input.remove();
+      deleteBtn.remove();
+    });
+
     main.appendChild(video);
+    main.appendChild(deleteBtn);
   });
   main.appendChild(input);
 });
@@ -167,6 +193,9 @@ function checkInfos() {
 
 // publishBtn - send JSON to PHP
 publishBtn.addEventListener("click", function () {
+  if (!confirm("Do you want to publish this certification ?")) {
+    return;
+  }
   let chapters = [];
   let currentChapter = [];
   let chapterName = 1;
@@ -176,6 +205,8 @@ publishBtn.addEventListener("click", function () {
 
   elements.forEach(function (element) {
     if (
+      (element.tagName.toLowerCase() === "button" &&
+        element.classList.contains("delete-btn")) ||
       (element.tagName.toLowerCase() === "input" && element.type === "file") ||
       (element.tagName.toLowerCase() === "i" &&
         element.classList.contains("fas") &&
@@ -256,7 +287,7 @@ publishBtn.addEventListener("click", function () {
     // Ajout de l'image de la miniature à formData
 
     if (thumbnail.files && thumbnail.files[0]) {
-      formData.append("poire", thumbnail.files[0]);
+      formData.append("thumbnail", thumbnail.files[0]);
     }
 
     // Ajout des autres fichiers à formData
@@ -287,18 +318,31 @@ publishBtn.addEventListener("click", function () {
 
 const chapDelim = document.getElementById("chapDelim");
 
+// chapter delimeter and delete chapter button
 chapDelim.addEventListener("click", function () {
   let div = document.createElement("div");
   div.setAttribute("class", "chapDelim");
-  main.appendChild(div);
-  chapterCounter++;
 
-  // create the chapter number
   let i = document.createElement("i");
   i.innerHTML = ` Chapter ${chapterCounter}`;
   i.setAttribute("class", "fas fa-ellipsis-h mt-3 mb-3");
-  main.appendChild(i);
+  
+  let deleteChapterBtn = document.createElement("button");
+  deleteChapterBtn.setAttribute("class", "fas fa-trash-alt delete-btn");
+  deleteChapterBtn.innerHTML = " Delete Chapter";
 
-  // span element that will contain the chapter number
+  deleteChapterBtn.addEventListener("click", function () {
+    div.remove();
+    chapterCounter--;
+  });
+
+  div.appendChild(i);  // Move i inside the div
+  div.appendChild(deleteChapterBtn);  // Move deleteChapterBtn inside the div
+
+  main.appendChild(div);
+
+  currentChapter = div; // Update the current chapter container
+  chapterCounter++;
+
   i.setAttribute("data-chapter", chapterCounter);
 });

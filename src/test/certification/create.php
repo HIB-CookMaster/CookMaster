@@ -26,9 +26,9 @@
         <div class="row mt-4">
             <div class="col-lg-6">
                 <label class="form-label opacity-75" for="thumbnail">Add a thumbnail</label>
-                <input type="file" class="form-control" id="thumbnail" name="thumbnail"/>
+                <input type="file" class="form-control" id="thumbnail" name="thumbnail" required />
                 <label class="form-label opacity-75 mt-3" for="difficulty">Select difficulty</label>
-                <select class="form-select" id="difficulty" aria-label="Default select example">
+                <select class="form-select" id="difficulty" aria-label="Default select example" required>
 
                     <option selected></option>
                     <option value="easy">Easy</option>
@@ -38,25 +38,20 @@
             </div>
             <div class="col-lg-6">
                 <label class="form-label opacity-75" for="duration">Formation duration (in hours)</label>
-                <input type="time" class="form-control" id="duration" />
+                <input type="time" class="form-control" id="duration" required />
 
                 <label class="form-label opacity-75 mt-3" for="description">Short description</label>
-                <input type="text" class="form-control" id="description" />
+                <input type="text" class="form-control" id="description" required />
             </div>
 
             <div class="mt-4">
                 <label class="form-label opacity-75" for="certifName">Formation name</label>
-                <input type="text" id="certifName" name="certifName" class="form-control" />
+                <input type="text" id="certifName" name="certifName" class="form-control" required />
             </div>
         </div>
     </div>
     <br>
     <hr>
-    <div class="d-flex justify-content-between w-100 mt-5">
-        <div class="d-flex flex-content-end">
-            <button id="publishBtn" type="btn" class="p-2 px-4 text-light btn btn-success text-end">PUBLISH CHAPTER</button>
-        </div>
-    </div>
     <div class="row mt-3">
         <div class="col-lg-3">
             <ul class="list-group rounded-0 p-4 rounded-4">
@@ -91,9 +86,13 @@
                 <li id="quizzBtn" class="li-hover list-group-item py-3 pointer d-flex justify-content-between my-1 border">
                     Quizz <i class="fa-solid fa-plus"></i>
                 </li>
+
+                <li id="publishBtn" class="list-group-item py-3 pointer d-flex justify-content-between my-1 border bg-success text-light">
+                    PUBLISH CHAPTER <i class="fa-solid fa-check"></i>
+                </li>
             </ul>
         </div>
-        <div class="col-lg-9 mt-3 p-4">
+        <div class="col-lg-9 mt-3 p-4" style="max-height: 774px; overflow-y: scroll;">
             <div class="d-flex flex-column" id="main">
 
             </div>
