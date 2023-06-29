@@ -68,10 +68,7 @@
                     Text Area <i class="fa-solid fa-plus"></i>
                 </li>
                 <li id="imgBtn" class="li-hover list-group-item py-3 pointer d-flex justify-content-between my-1 border">
-                    Image <i class="fa-solid fa-plus"></i>
-                </li>
-                <li id="videoBtn" class="li-hover list-group-item py-3 pointer d-flex justify-content-between my-1 border">
-                    Video <i class="fa-solid fa-plus"></i>
+                    Add a media <i class="fa-solid fa-plus"></i>
                 </li>
                 <li id="tipsBtn" class="li-hover list-group-item py-3 pointer d-flex justify-content-between my-1 border">
                     Tips <i class="fa-solid fa-plus"></i>

@@ -3,7 +3,6 @@ let main = document.getElementById("main");
 let titleBtn = document.getElementById("titleBtn");
 let textAreaBtn = document.getElementById("textAreaBtn");
 let imgBtn = document.getElementById("imgBtn");
-let videoBtn = document.getElementById("videoBtn");
 let tipsBtn = document.getElementById("tipsBtn");
 let importantBtn = document.getElementById("importantBtn");
 let warningBtn = document.getElementById("warningBtn");
@@ -75,36 +74,6 @@ imgBtn.addEventListener("click", function () {
   });
   main.appendChild(input);
 });
-
-// videoBtn - create input files and video
-videoBtn.addEventListener("click", function () {
-  let input = document.createElement("input");
-  input.setAttribute("type", "file");
-  input.setAttribute("accept", "video/*");
-  input.setAttribute("class", "video");
-  input.addEventListener("change", function () {
-    let video = document.createElement("video");
-    video.setAttribute("src", URL.createObjectURL(input.files[0]));
-    video.setAttribute("class", "video");
-    video.autoplay = false;
-    video.controls = true;
-
-    let deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.setAttribute("class", "delete-btn");
-
-    deleteBtn.addEventListener("click", function () {
-      video.remove();
-      input.remove();
-      deleteBtn.remove();
-    });
-
-    main.appendChild(video);
-    main.appendChild(deleteBtn);
-  });
-  main.appendChild(input);
-});
-
 // tips - create input files
 tipsBtn.addEventListener("click", function () {
   createElement("input", "tips");

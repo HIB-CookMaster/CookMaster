@@ -67,7 +67,7 @@ function checkFileName($filename){
             <a class="nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/src/pages/subscription.php">Subscription</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/src/test/test.php">Test</a>
+            <a class="nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/src/test/test.php">Admin</a>
           </li>
         </ul>
 
