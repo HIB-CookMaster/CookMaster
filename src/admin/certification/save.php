@@ -13,7 +13,7 @@ if (!empty($infos->certifName)) {
 }
 
 // Define the upload directory path
-$uploadDir = './' . $filename . '/';
+$uploadDir = '../../cert/' . $filename . '/';
 
 // Create the upload directory with the certificate's name if it does not exist
 if (!file_exists($uploadDir)) {

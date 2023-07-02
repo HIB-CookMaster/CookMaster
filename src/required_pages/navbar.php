@@ -7,8 +7,14 @@ $filename = basename($path, ".php");
 
 // echo $filename;  // Affiche le nom du fichier sans l'extension .php
 
-function checkFileName($filename){
-  if($filename == "course" || $filename == "learn" || $filename == "myRecipes" || $filename == "orderToEat" || $filename == "index" || $filename == "courses" || $filename == "signup" || $filename == "login" || $filename == "events" || $filename == "subscription"){
+function checkFileName($filename)
+{
+  if (
+    $filename == "course" || $filename == "learn" || $filename == "myRecipes" ||
+    $filename == "orderToEat" || $filename == "index" || $filename == "courses" ||
+    $filename == "signup" || $filename == "login" || $filename == "events" ||
+    $filename == "subscription" || $filename == "admin" || $filename == "joinEvent"
+  ) {
     return true;
   } else {
     return false;
@@ -22,21 +28,25 @@ function checkFileName($filename){
   <nav class="navbar navbar-expand-lg border-0 shadow-none">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <span class="logo-title fw-bold <?php if(!checkFileName($filename)){echo "text-light";} ?>">Foodieland<span class="text-danger">.</span></span>
+        <span class="logo-title fw-bold <?php if (!checkFileName($filename)) {
+                                          echo "text-light";
+                                        } ?>">Foodieland<span class="text-danger">.</span></span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/">Home</a>
+            <a class="nav-link mx-3 <?php if (!checkFileName($filename)) {
+                                      echo "text-light";
+                                    } ?>" href="/CookMaster/">Home</a>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <a class="dropdown-toggle nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <a class="dropdown-toggle nav-link mx-3 <?php if (!checkFileName($filename)) {
+                                                        echo "text-light";
+                                                      } ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Formations
               </a>
 
@@ -47,12 +57,15 @@ function checkFileName($filename){
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/src/pages/events.php">Events</a>
+            <a class="nav-link mx-3 <?php if (!checkFileName($filename)) {
+                                      echo "text-light";
+                                    } ?>" href="/CookMaster/src/pages/events.php">Events</a>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <a class="dropdown-toggle nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <a class="dropdown-toggle nav-link mx-3 <?php if (!checkFileName($filename)) {
+                                                        echo "text-light";
+                                                      } ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Services
               </a>
 
@@ -64,30 +77,40 @@ function checkFileName($filename){
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/src/pages/subscription.php">Subscription</a>
+            <a class="nav-link mx-3 <?php if (!checkFileName($filename)) {
+                                      echo "text-light";
+                                    } ?>" href="/CookMaster/src/pages/subscription.php">Subscription</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-3 <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/src/test/test.php">Admin</a>
+            <a class="nav-link mx-3 <?php if (!checkFileName($filename)) {
+                                      echo "text-light";
+                                    } ?>" href="/CookMaster/src/admin/admin.php">Admin</a>
           </li>
         </ul>
 
         <!-- Disconnected -->
         <ul class="navbar-nav">
-        <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link bg-green text-light" href="/CookMaster/src/pages/contact.php">Contact us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/src/pages/signup.php"><i
-                class="fa-solid fa-right-to-bracket me-2"></i>Sign up</a>
+            <a class="nav-link <?php if (!checkFileName($filename)) {
+                                  echo "text-light";
+                                } ?>" href="/CookMaster/src/pages/signup.php"><i class="fa-solid fa-right-to-bracket me-2"></i>Sign up</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?php if(!checkFileName($filename)){echo "text-light";} ?>" href="/CookMaster/src/pages/login.php"><i class="fa-regular fa-user me-2"></i>Login</a>
+            <a class="nav-link <?php if (!checkFileName($filename)) {
+                                  echo "text-light";
+                                } ?>" href="/CookMaster/src/pages/login.php"><i class="fa-regular fa-user me-2"></i>Login</a>
           </li>
 
           <li class="nav-item">
-            <button class="btn btn-primary shadow-0 border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-              <i class="fa-solid fa-cart-shopping <?php if(!checkFileName($filename)){echo "text-light";} else {echo "text-dark";} ?>"></i>
+            <button class="btn btn-primary shadow-0 border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+              <i class="fa-solid fa-cart-shopping <?php if (!checkFileName($filename)) {
+                                                    echo "text-light";
+                                                  } else {
+                                                    echo "text-dark";
+                                                  } ?>"></i>
             </button>
           </li>
 
@@ -96,10 +119,8 @@ function checkFileName($filename){
 
           <!-- Connected -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink"
-              role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-              <img src="https://www.pngall.com/wp-content/uploads/2016/05/Man-Download-PNG.png" class="rounded-circle"
-                height="22" alt="Portrait of a Woman" loading="lazy" />
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <img src="https://www.pngall.com/wp-content/uploads/2016/05/Man-Download-PNG.png" class="rounded-circle" height="22" alt="Portrait of a Woman" loading="lazy" />
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li>
@@ -114,8 +135,7 @@ function checkFileName($filename){
             </ul>
           </li>
           <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle hidden-arrow" type="button" id="dropdownMenuButton1"
-              data-mdb-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-primary dropdown-toggle hidden-arrow" type="button" id="dropdownMenuButton1" data-mdb-toggle="dropdown" aria-expanded="false">
               <i class="fa-regular fa-bell"></i>
             </button>
             <ul class="dropdown-menu p-0" style="width: 400px" aria-labelledby="dropdownMenuButton1">
@@ -127,9 +147,7 @@ function checkFileName($filename){
                   <div class="row d-flex">
 
                     <div class="col-2">
-                      <img class="img-fluid rounded-2"
-                        src="https://img.freepik.com/vecteurs-libre/homme-affaires-caractere-avatar-isole_24877-60111.jpg?w=2000"
-                        alt="">
+                      <img class="img-fluid rounded-2" src="https://img.freepik.com/vecteurs-libre/homme-affaires-caractere-avatar-isole_24877-60111.jpg?w=2000" alt="">
                     </div>
 
                     <div class="col-10">
@@ -173,13 +191,12 @@ function checkFileName($filename){
     <div class="d-flex flex-column">
       <div class="p-2 d-flex align-items-center border-bottom p-3 mt-3">
         <div class="position-relative">
-          
+
           <span class="position-absolute top-0 start-0 translate-middle">
             <span class="visually-hidden">New alerts</span>
             <i class="fa-solid fa-xmark border border-light rounded-pill bg-light text-secondary px-1 card-shadow"></i>
           </span>
-          <img style="height: 70px; width: 70px" src="/CookMaster/assets/images/home/recipes/cauliflower.webp"
-            class=" object-fit-cover rounded-2" alt="...">
+          <img style="height: 70px; width: 70px" src="/CookMaster/assets/images/home/recipes/cauliflower.webp" class=" object-fit-cover rounded-2" alt="...">
         </div>
         <div class="ms-3 align-items-start h-100 w-100 justify-content-start">
           <span class="d-block">Red Hot Tomato</span>
@@ -191,13 +208,12 @@ function checkFileName($filename){
 
       <div class="p-2 d-flex align-items-center border-bottom p-3 mt-3">
         <div class="position-relative">
-          
+
           <span class="position-absolute top-0 start-0 translate-middle">
             <span class="visually-hidden">New alerts</span>
             <i class="fa-solid fa-xmark border border-light rounded-pill bg-light text-secondary px-1 card-shadow"></i>
           </span>
-          <img style="height: 70px; width: 70px" src="/CookMaster/assets/images/home/recipes/cauliflower.webp"
-            class=" object-fit-cover rounded-2" alt="...">
+          <img style="height: 70px; width: 70px" src="/CookMaster/assets/images/home/recipes/cauliflower.webp" class=" object-fit-cover rounded-2" alt="...">
         </div>
         <div class="ms-3 align-items-start h-100 w-100 justify-content-start">
           <span class="d-block">Red Hot Tomato</span>
@@ -208,13 +224,12 @@ function checkFileName($filename){
 
       <div class="p-2 d-flex align-items-center border-bottom p-3 mt-3">
         <div class="position-relative">
-          
+
           <span class="position-absolute top-0 start-0 translate-middle">
             <span class="visually-hidden">New alerts</span>
             <i class="fa-solid fa-xmark border border-light rounded-pill bg-light text-secondary px-1 card-shadow"></i>
           </span>
-          <img style="height: 70px; width: 70px" src="/CookMaster/assets/images/home/recipes/cauliflower.webp"
-            class=" object-fit-cover rounded-2" alt="...">
+          <img style="height: 70px; width: 70px" src="/CookMaster/assets/images/home/recipes/cauliflower.webp" class=" object-fit-cover rounded-2" alt="...">
         </div>
         <div class="ms-3 align-items-start h-100 w-100 justify-content-start">
           <span class="d-block">Red Hot Tomato</span>
@@ -225,13 +240,12 @@ function checkFileName($filename){
 
       <div class="p-2 d-flex align-items-center border-bottom p-3 mt-3">
         <div class="position-relative">
-          
+
           <span class="position-absolute top-0 start-0 translate-middle">
             <span class="visually-hidden">New alerts</span>
             <i class="fa-solid fa-xmark border border-light rounded-pill bg-light text-secondary px-1 card-shadow"></i>
           </span>
-          <img style="height: 70px; width: 70px" src="/CookMaster/assets/images/home/recipes/cauliflower.webp"
-            class=" object-fit-cover rounded-2" alt="...">
+          <img style="height: 70px; width: 70px" src="/CookMaster/assets/images/home/recipes/cauliflower.webp" class=" object-fit-cover rounded-2" alt="...">
         </div>
         <div class="ms-3 align-items-start h-100 w-100 justify-content-start">
           <span class="d-block">Red Hot Tomato</span>
@@ -253,12 +267,12 @@ function checkFileName($filename){
 
 
 <script>
-function redirectToCart() {
-  window.location.href = "/CookMaster/src/pages/cart.php";
-}
+  function redirectToCart() {
+    window.location.href = "/CookMaster/src/pages/cart.php";
+  }
 
 
-function redirectToCheckout() {
-  window.location.href = "/CookMaster/src/pages/checkout.php";
-}
+  function redirectToCheckout() {
+    window.location.href = "/CookMaster/src/pages/checkout.php";
+  }
 </script>

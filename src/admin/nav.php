@@ -11,10 +11,10 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="/CookMaster/src/test/users/create.php">Create User</a>
+                                <a class="dropdown-item" href="/CookMaster/src/admin/users/create.php">Create User</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/CookMaster/src/test/users/list.php">List all Users</a>
+                                <a class="dropdown-item" href="/CookMaster/src/admin/users/list.php">List all Users</a>
                             </li>
                         </ul>
                     </li>
@@ -25,10 +25,10 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="/CookMaster/src/test/recipes/create.php">Create a Recipe</a>
+                                <a class="dropdown-item" href="/CookMaster/src/admin/recipes/create.php">Create a Recipe</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/CookMaster/src/test/recipes/list.php">List all Recipes</a>
+                                <a class="dropdown-item" href="/CookMaster/src/admin/recipes/list.php">List all Recipes</a>
                             </li>
                         </ul>
                     </li>
@@ -40,10 +40,10 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="/CookMaster/src/test/events/create.php">New Events</a>
+                                <a class="dropdown-item" href="/CookMaster/src/admin/events/create.php">New Events</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/CookMaster/src/test/events/list.php">List all Events</a>
+                                <a class="dropdown-item" href="/CookMaster/src/admin/events/list.php">List all Events</a>
                             </li>
                         </ul>
                     </li>
@@ -56,13 +56,13 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="/CookMaster/src/test/certification/create.php">New formation</a>
+                                <a class="dropdown-item" href="/CookMaster/src/admin/certification/create.php">New formation</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/CookMaster/src/test/certification/list.php">List all formation</a>
+                                <a class="dropdown-item" href="/CookMaster/src/admin/certification/list.php">List all formation</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/CookMaster/src/test/certification/sendDataToCertif.php">Generate Certification</a>
+                                <a class="dropdown-item" href="/CookMaster/src/admin/certification/sendDataToCertif.php">Generate Certification</a>
                             </li>
                         </ul>
                     </li>

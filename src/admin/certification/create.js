@@ -51,7 +51,7 @@ textAreaBtn.addEventListener("click", function () {
 imgBtn.addEventListener("click", function () {
   let input = document.createElement("input");
   input.setAttribute("type", "file");
-  input.setAttribute("accept", "image/*");
+  input.setAttribute("accept", "*/*");
   input.setAttribute("class", "img");
   input.setAttribute("data-isThumbnail", "false");
   input.addEventListener("change", function () {
@@ -274,7 +274,7 @@ publishBtn.addEventListener("click", function () {
     formData.append("infos", JSON.stringify(infos));
 
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "/CookMaster/src/test/certification/save.php", true);
+    xhr.open("POST", "/CookMaster/src/admin/certification/save.php", true);
     xhr.send(formData);
 
     xhr.onreadystatechange = function () {

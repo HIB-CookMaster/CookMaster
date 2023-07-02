@@ -1,5 +1,5 @@
 <?php require "../required_pages/header.php"; ?>
-<?php require "../required_pages/navbar.php"; ?>
+<?php require "./navbar.php"; ?>
 
 <div class="bg-cart bg-filter"
     style="margin-top: -88px; background: url('/CookMaster/assets/images/cart/banner.jpg'); height: 300px; background-size: cover; background-position: 0% 20%">
