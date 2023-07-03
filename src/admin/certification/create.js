@@ -198,6 +198,10 @@ publishBtn.addEventListener("click", function () {
       obj.type = type;
       obj.class = element.className;
 
+      if (type === "span" && element.classList.contains("quizz")) {
+        obj.question = element.querySelector("input").value;
+      }
+
       if (type === "img" || type === "video") {
         obj.content = element.src;
         console.log(obj);

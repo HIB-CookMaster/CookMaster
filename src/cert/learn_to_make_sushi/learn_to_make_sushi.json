@@ -1,1 +1,264 @@
-{"infos":{"certifName":"Learn to make Sushi","thumbnail":"..\/..\/cert\/learn_to_make_sushi\/sushi-chef.jpg","difficulty":"advanced","duration":"08:00","description":"Short description about learn to make sushi lol","chapters":3},"data":[[{"name":"Chapitre 1","data":[{"type":"img","class":"img","content":"..\/..\/cert\/learn_to_make_sushi\/sushi.mp4"},{"type":"textarea","class":"textArea","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},{"type":"input","class":"subTitle","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."},{"type":"input","class":"tips","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."}]},{"name":"Chapitre 2","data":[{"type":"img","class":"img","content":"..\/..\/cert\/learn_to_make_sushi\/sushi-chef.jpg"},{"type":"textarea","class":"textArea","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."}]},{"name":"Chapitre 3","data":[{"type":"span","class":"quizz"},{"type":"ul","class":"quizz","answers":[{"answer":"gqqsd","correct":false},{"answer":"gqsdf","correct":false},{"answer":"qsdfsqdf","correct":false},{"answer":"qsdf","correct":true}]},{"type":"span","class":"quizz"},{"type":"ul","class":"quizz","answers":[{"answer":"dfsqdf","correct":false},{"answer":"sdqfqs","correct":false},{"answer":"dfsqd","correct":false},{"answer":"fsdqfsqdf","correct":true}]},{"type":"span","class":"quizz"},{"type":"ul","class":"quizz","answers":[{"answer":"fsqdf","correct":false},{"answer":"qsdf","correct":false},{"answer":"sqdf","correct":false},{"answer":"sqdfsqdf","correct":true}]},{"type":"span","class":"quizz"},{"type":"ul","class":"quizz","answers":[{"answer":"fqsdf","correct":false},{"answer":"qsdfsqd","correct":false},{"answer":"fsqdf","correct":false},{"answer":"sqdfsqdfsqdf","correct":true}]}]}]]}
+{
+  "infos": {
+    "certifName": "Learn to make Sushi",
+    "thumbnail": "../../cert/learn_to_make_sushi/sushi-chef.jpg",
+    "difficulty": "advanced",
+    "duration": "08:00",
+    "description": "Are you passionate about sushi? Do you want to unlock the secrets of the Sushi Masters? Sushi4You by labo Culinaire will satisfy you by offering you 2 technical Japanese cooking classes, but also cooking demonstrations specializing in this gastronomy.",
+    "chapters": 7
+  },
+  "data": [
+    [
+      {
+        "name": "Chapitre 1",
+        "data": [
+          {
+            "type": "img",
+            "class": "img",
+            "content": "../../cert/learn_to_make_sushi/sushi.mp4"
+          },
+          {
+            "type": "textarea",
+            "class": "textArea",
+            "content": "With our various culinary workshops, you will finally be able to master the art of Japanese cuisine in 2 or 3 hours, depending on the specialty you choose, while meeting new passionate people like you!\n\nYou will have the opportunity to make nigiri sushi , maki and california rolls during the 2-hour \"Sushi4You\" workshop, or learn to become a sushi master by cooking in addition to temakis and tulips for 3 hours with the help of a real sushi master.\n\nDuring all the Japanese cooking workshops, you will have the opportunity to discover the preparation of Japanese round rice as well as the traditional bamboo mat .\n\nDo not hesitate any longer, come and learn how to make the famous Japanese bites with a Master Sushi,  in a gourmet and friendly atmosphere!"
+          },
+          {
+            "type": "img",
+            "class": "img",
+            "content": "../../cert/learn_to_make_sushi/espace-japon-1024x576.png"
+          },
+          {
+            "type": "textarea",
+            "class": "textArea",
+            "content": "In the heart of the 10th arrondissement of Paris, a space dedicated to Japan and its culture, invites you to come and take part in cooking classes in a setting typical of the land of the rising sun. Classes are scheduled every day according to a thematic calendar that changes constantly according to the seasons. Ramen on Tuesday, all about miso on Wednesday, Japanese pastries on Saturday. No month is alike so that Japan and its cuisine is no longer a secret for you."
+          },
+          {
+            "type": "input",
+            "class": "important",
+            "content": "Count 60 euros for 2 hours of lessons in a small group of 12 people maximum before tasting your preparation all together around a friendly table."
+          }
+        ]
+      },
+      {
+        "name": "Chapitre 2",
+        "data": [
+          { "type": "input", "class": "title", "content": "Homemade Sushi" },
+          {
+            "type": "img",
+            "class": "img",
+            "content": "../../cert/learn_to_make_sushi/Homemade-Sushi-1-640x427.jpg"
+          },
+          {
+            "type": "textarea",
+            "class": "textArea",
+            "content": "I\u2019ll be very honest and say that there\u2019s definitely a reason why sushi chefs spend a decade learning how to perfect sushi rice or cut raw fish like a boss, because it does make a difference.\n\nHomemade sushi will never be at the level of what you\u2019d get from the top sushi restaurants in NYC, but here\u2019s where homemade sushi rolls win:\n\nYou get to gorge yourself on a FEAST for like $20, whereas a similar amount of food at a restaurant would cost a couple hundred. Soooooo worth it, if you ask me."
+          },
+          {
+            "type": "input",
+            "class": "warning",
+            "content": "To get started, you need the right kind of seaweed. The one on the left below is thick and perfect for rolling (this is the one I use). The one on the right is too flimsy. I use that seaweed for snacking. Make sure you get seaweed specific for making sushi, which it should state on the package. It will sometimes say \u201cnori\u201d on the package."
+          }
+        ]
+      },
+      {
+        "name": "Chapitre 3",
+        "data": [
+          { "type": "input", "class": "title", "content": "Homemade Sushi" },
+          {
+            "type": "img",
+            "class": "img",
+            "content": "../../cert/learn_to_make_sushi/Homemade-Sushi-7-640x427.jpg"
+          },
+          {
+            "type": "textarea",
+            "class": "textArea",
+            "content": "Then spread your sheet of nori with a layer of prepared sushi rice (that whole post covers how to make the rice), and flatten the top of the rice gently with a paddle, but do not smash the rice, as my mom would always say. And make sure not to neglect the edges of the nori sheet!"
+          }
+        ]
+      },
+      {
+        "name": "Chapitre 4",
+        "data": [
+          {
+            "type": "input",
+            "class": "title",
+            "content": "How much fish you need"
+          },
+          {
+            "type": "textarea",
+            "class": "textArea",
+            "content": "For my rolls this time, I got this gorgeous piece of salmon. It was a 1/2lb piece, and gave us enough fish for about 6 rolls, plus some snacking. Even at $28/lb, which seems like a lot, paying $14 for that much fish is certainly worth it, and dirt cheap if you ask me!"
+          },
+          {
+            "type": "img",
+            "class": "img",
+            "content": "../../cert/learn_to_make_sushi/Homemade-Sushi-8-640x427.jpg"
+          }
+        ]
+      },
+      {
+        "name": "Chapitre 5",
+        "data": [
+          {
+            "type": "input",
+            "class": "title",
+            "content": "How to cut raw fish for sushi"
+          },
+          {
+            "type": "textarea",
+            "class": "textArea",
+            "content": "Here is how I cut salmon for my sushi rolls. First, cut straight down through the filet, then cut that piece in half through the center so you have a small strip. Make sure you\u2019re using a sharp knife and gliding with one stroke, to get a nice clean cut."
+          },
+          {
+            "type": "img",
+            "class": "img",
+            "content": "../../cert/learn_to_make_sushi/Homemade-Sushi-9-640x427.jpg"
+          },
+          {
+            "type": "textarea",
+            "class": "textArea",
+            "content": "Place your desired ingredients onto the sushi rice. I\u2019ve got salmon, avocado, and cream cheese (I know, I know. But Philly-style rolls are my favorite, and making this at home is all about customizing the ingredients to what you enjoy):"
+          },
+          {
+            "type": "img",
+            "class": "img",
+            "content": "../../cert/learn_to_make_sushi/Homemade-Sushi-10-640x427.jpg"
+          },
+          {
+            "type": "textarea",
+            "class": "textArea",
+            "content": "Roll it up tightly, using a bamboo mat. It\u2019s a specific kitchen item, but you can get a decent one for less than $2 on Amazon or at an Asian market, so I think it\u2019s worth having. It ensures the best results for the roll holding together."
+          },
+          {
+            "type": "input",
+            "class": "tips",
+            "content": "If you don\u2019t have one, you can sort of use parchment paper or plastic wrap, but you won\u2019t be able to wrap it as tightly, so buy one if you plan to make sushi regularly."
+          },
+          {
+            "type": "img",
+            "class": "img",
+            "content": "../../cert/learn_to_make_sushi/Homemade-Sushi-11-640x427.jpg"
+          },
+          {
+            "type": "input",
+            "class": "important",
+            "content": "Then use your sharpest knife to cut the sushi salmon roll into pieces. I don\u2019t find it particularly better to use a serrated knife. Just make sure to use a sharp one!"
+          },
+          {
+            "type": "img",
+            "class": "img",
+            "content": "../../cert/learn_to_make_sushi/Homemade-Sushi-12-640x427.jpg"
+          },
+          {
+            "type": "textarea",
+            "class": "textArea",
+            "content": "You may also wish to have a small bowl of cold water or a damp towel at your work station for wiping your fingertips between rolls. Sometimes things can get sticky, so this can really make things easier!"
+          }
+        ]
+      },
+      {
+        "name": "Chapitre 6",
+        "data": [
+          {
+            "type": "input",
+            "class": "title",
+            "content": "What to serve with your sushi?"
+          },
+          {
+            "type": "input",
+            "class": "important",
+            "content": "Now you\u2019re ready to eat the sushi rolls with some soy sauce, pickled ginger, and wasabi paste, as desired!"
+          },
+          {
+            "type": "img",
+            "class": "img",
+            "content": "../../cert/learn_to_make_sushi/Homemade-Sushi-3-640x427.jpg"
+          }
+        ]
+      },
+      {
+        "name": "Chapitre 7",
+        "data": [
+          {
+            "type": "span",
+            "class": "quizz",
+            "question": "What type of rice is traditionally used in sushi?"
+          },
+          {
+            "type": "ul",
+            "class": "quizz",
+            "answers": [
+              { "answer": "Long-grain rice", "correct": false },
+              { "answer": "Medium-grain rice", "correct": false },
+              { "answer": "Basmati rice", "correct": false },
+              { "answer": "Short-grain rice", "correct": true }
+            ]
+          },
+          {
+            "type": "span",
+            "class": "quizz",
+            "question": "Which essential ingredient is used to season sushi rice?"
+          },
+          {
+            "type": "ul",
+            "class": "quizz",
+            "answers": [
+              { "answer": "Soy sauce", "correct": false },
+              { "answer": "Rice vinegar", "correct": true },
+              { "answer": "Miso", "correct": false },
+              { "answer": "Teriyaki sauce", "correct": false }
+            ]
+          },
+          {
+            "type": "span",
+            "class": "quizz",
+            "question": "What is 'nori' in sushi preparation?"
+          },
+          {
+            "type": "ul",
+            "class": "quizz",
+            "answers": [
+              { "answer": "A type of fish", "correct": false },
+              { "answer": "A type of vegetable", "correct": false },
+              { "answer": "Edible seaweed", "correct": true },
+              { "answer": "Type of sushi roll", "correct": false }
+            ]
+          },
+          {
+            "type": "span",
+            "class": "quizz",
+            "question": "What is 'sashimi'?"
+          },
+          {
+            "type": "ul",
+            "class": "quizz",
+            "answers": [
+              {
+                "answer": "Rice ball with a small amount of fish on top",
+                "correct": false
+              },
+              { "answer": "Raw fish served without rice", "correct": true },
+              { "answer": "A roll of sushi", "correct": false },
+              { "answer": "A type of sauce used in sushi", "correct": false }
+            ]
+          },
+          {
+            "type": "span",
+            "class": "quizz",
+            "question": "Which of the following is not a traditional ingredient in sushi?"
+          },
+          {
+            "type": "ul",
+            "class": "quizz",
+            "answers": [
+              { "answer": "Raw tuna", "correct": false },
+              { "answer": "Avocado", "correct": false },
+              { "answer": "Cooked shrimp", "correct": false },
+              { "answer": "Cheddar cheese", "correct": true }
+            ]
+          }
+        ]
+      }
+    ]
+  ]
+}
