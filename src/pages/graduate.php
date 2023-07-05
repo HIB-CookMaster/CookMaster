@@ -51,10 +51,10 @@
         $content = file_get_contents($file);
         $json = json_decode($content);
     ?>
-        <div class="card mb-3 shadow-0 border-0 card-box pointer" onclick="window.location.href='./learn.php?<?php echo $json->infos->certifName . "&chap=0" ?>'">
+        <div class="card mb-3 shadow-0 border-0 card-box pointer" onclick="window.location.href='./learn.php?certifName=<?php echo $json->infos->certifName . "&chap=0" ?>'">
             <div class="row g-0">
                 <div class="col-md-4 p-3">
-                    <img src="<?php echo $newStr = str_replace("../../", "../", $json->infos->thumbnail); ?>" alt="Trendy Pants and Shoes" class="img-fluid h-100 object-fit-cover" />
+                    <img src="<?php echo $newStr = str_replace("../../", "../", $json->infos->thumbnail); ?>" alt="" class="img-fluid h-100 object-fit-cover" />
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -77,11 +77,11 @@
                     </div>
                 </div>
             </div>
-
-        <?php
-    }
-        ?>
         </div>
+    <?php
+    }
+    ?>
+
 </div>
 <br><br><br><br><br>
 <?php require "../required_pages/footer.php"; ?>
