@@ -210,18 +210,16 @@ if ($jsonFile !== null) {
                     <?php if ($json->data[0][(int) $chap]->data[$i]->class == "quizz") { ?>
                         <h4 class="opacity-75 title"><?php echo $json->data[0][(int) $chap]->data[$i]->question;
                                                         $i++ ?></h4>
-                        <form method="POST" action="">
-                            <ul class="quizz list-unstyled">
-                                <?php foreach ($json->data[0][(int) $chap]->data[$i]->answers as $answer) { ?>
-                                    <li class="quizz-answer">
-                                        <label>
-                                            <input type="radio" name="answer_<?php echo $i ?>" value="<?php echo $answer->answer ?>">
-                                            <?php echo $answer->answer ?>
-                                        </label>
-                                    </li>
-                                <?php } ?>
-                            </ul>
-                        </form>
+                        <ul class="quizz list-unstyled">
+                            <?php foreach ($json->data[0][(int) $chap]->data[$i]->answers as $answer) { ?>
+                                <li class="quizz-answer">
+                                    <label>
+                                        <input type="radio" name="answer_<?php echo $i ?>" value="<?php echo $answer->answer ?>">
+                                        <?php echo $answer->answer ?>
+                                    </label>
+                                </li>
+                            <?php } ?>
+                        </ul>
                     <?php } ?>
                 <?php } ?>
 

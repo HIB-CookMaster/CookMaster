@@ -211,7 +211,10 @@ $address = str_replace(" ", "+", $address);
             <div class="row m-0 p-1 border-bottom border-secondary-subtle">
                 <div class="card shadow-none border-0 p-2 d-flex col-lg-6 col-sm-12">
                     <div class="card-body">
-                        <h5>Workshop - Cheese Cake <span class="badge bg-secondary bg-opacity-10 ms-2 fw-normal text-dark opacity-50"><i class="fa-solid fa-user fa-2xs me-2"></i>28/31</span></h5>
+                        <h5>Workshop - Cheese Cake 
+                            <span class="badge bg-secondary bg-opacity-10 ms-2 fw-normal text-dark opacity-50"><i class="fa-solid fa-user fa-2xs me-2"></i>28/31</span>
+                            <span class="badge bg-success ms-2 fw-normal text-white bg-opacity-75"><i class="fa-solid fa-tag fa-2xs me-2"></i>15€</span>
+                        </h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary"><i class="fa-solid fa-location-dot me-2 text-success"></i>Le Comptoir du Relais - 9 Carrefour de l'Odéon, 75006 Paris</h6>
                         <img src="../../assets/images/events/event1.png" alt="" class="img-fluid rounded-4 shadow-sm">
                         <div class="d-flex">
@@ -224,7 +227,7 @@ $address = str_replace(" ", "+", $address);
                                 <div class="mt-2 opacity-75 text-dark fs-little">From 11:00 am to 12:00 pm</div>
                             </div>
                             <div class="d-flex align-items-center ms-auto pointer">
-                                <div class="text-primary-emphasis me-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-share me-2"></i><span>Join Event</span></div>
+                                <div class="text-primary-emphasis me-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-share me-2"></i><span>Event details</span></div>
                             </div>
                         </div>
                     </div>
@@ -244,7 +247,10 @@ $address = str_replace(" ", "+", $address);
             <div class="row m-0 p-1 border-bottom border-secondary-subtle">
                 <div class="card shadow-none border-0 p-2 d-flex col-lg-6 col-sm-12">
                     <div class="card-body">
-                        <h5>Workshop - Cheese Cake <span class="badge bg-secondary bg-opacity-10 ms-2 fw-normal text-dark opacity-50"><i class="fa-solid fa-user fa-2xs me-2"></i>28/31</span></h5>
+                        <h5>Workshop - Cheese Cake 
+                            <span class="badge bg-secondary bg-opacity-10 ms-2 fw-normal text-dark opacity-50"><i class="fa-solid fa-user fa-2xs me-2"></i>28/31</span>
+                            <span class="badge bg-success ms-2 fw-normal text-white bg-opacity-75"><i class="fa-solid fa-tag fa-2xs me-2"></i>15€</span>
+                        </h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary"><i class="fa-solid fa-location-dot me-2 text-success"></i>Le Comptoir du Relais - 9 Carrefour de l'Odéon, 75006 Paris</h6>
                         <img src="../../assets/images/events/event1.png" alt="" class="img-fluid rounded-4 shadow-sm">
                         <div class="d-flex">
@@ -257,7 +263,7 @@ $address = str_replace(" ", "+", $address);
                                 <div class="mt-2 opacity-75 text-dark fs-little">From 11:00 am to 12:00 pm</div>
                             </div>
                             <div class="d-flex align-items-center ms-auto pointer">
-                                <div class="text-primary-emphasis me-3"><i class="fa-solid fa-share me-2"></i><span>Join Event</span></div>
+                                <div class="text-primary-emphasis me-3"><i class="fa-solid fa-share me-2"></i><span>Event details</span></div>
                             </div>
                         </div>
                     </div>
@@ -265,7 +271,10 @@ $address = str_replace(" ", "+", $address);
 
                 <div class="card shadow-none border-0 p-2 d-flex col-lg-6 col-sm-12">
                     <div class="card-body">
-                        <h5>Workshop - Cheese Cake <span class="badge bg-secondary bg-opacity-10 ms-2 fw-normal text-dark opacity-50"><i class="fa-solid fa-user fa-2xs me-2"></i>28/31</span></h5>
+                        <h5>Workshop - Cheese Cake
+                            <span class="badge bg-secondary bg-opacity-10 ms-2 fw-normal text-dark opacity-50"><i class="fa-solid fa-user fa-2xs me-2"></i>28/31</span>
+                            <span class="badge bg-success ms-2 fw-normal text-white bg-opacity-75"><i class="fa-solid fa-tag fa-2xs me-2"></i>15€</span>
+                        </h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary"><i class="fa-solid fa-location-dot me-2 text-success"></i>Le Comptoir du Relais - 9 Carrefour de l'Odéon, 75006 Paris</h6>
                         <img src="../../assets/images/events/event1.png" alt="" class="img-fluid rounded-4 shadow-sm">
                         <div class="d-flex">
@@ -278,7 +287,7 @@ $address = str_replace(" ", "+", $address);
                                 <div class="mt-2 opacity-75 text-dark fs-little">From 11:00 am to 12:00 pm</div>
                             </div>
                             <div class="d-flex align-items-center ms-auto pointer">
-                                <div class="text-primary-emphasis me-3"><i class="fa-solid fa-share me-2"></i><span>Join Event</span></div>
+                                <div class="text-primary-emphasis me-3"><i class="fa-solid fa-share me-2"></i><span>Event details</span></div>
                             </div>
                         </div>
                     </div>
@@ -308,7 +317,10 @@ $address = str_replace(" ", "+", $address);
                         </div>
                     </div>
                     <div class="d-flex flex-column rounded-4" style="background-color: #FFFFFF;">
-                        <span class="mt-2 opacity-75 p-3">Workshop - Cheese Cake <span class="badge ms-2 fw-normal text-dark card-shadow"><i class="fa-solid fa-user fa-2xs me-2"></i>28/31</span></span>
+                        <span class="mt-2 opacity-75 p-3">Workshop - Cheese Cake 
+                            <span class="badge ms-2 fw-normal text-dark card-shadow"><i class="fa-solid fa-user fa-2xs me-2"></i>28/31</span>
+                            <span class="badge ms-2 fw-normal text-white bg-success card-shadow"><i class="fa-solid fa-tag fa-2xs me-2"></i>15€</span>
+                        </span>
 
                         <div class="row px-4 rounded-3 mx-3 card-shadow">
                             <div class="col p-4">
