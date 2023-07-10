@@ -52,7 +52,7 @@
                     <li class="nav-item me-3 me-lg-0 dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-mdb-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-calendar"></i><span class="ms-2">Certification</span>
+                            <i class="fa-solid fa-certificate"></i><span class="ms-2">Certification</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
@@ -63,6 +63,18 @@
                             </li>
                             <li>
                                 <a class="dropdown-item" href="/CookMaster/src/admin/certification/sendDataToCertif.php">Generate Certification</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item me-3 me-lg-0 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-upload"></i><span class="ms-2">Uploads</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="/CookMaster/src/admin/uploads/uploads.php">Upload files</a>
                             </li>
                         </ul>
                     </li>
