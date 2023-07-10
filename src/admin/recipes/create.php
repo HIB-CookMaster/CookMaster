@@ -15,7 +15,7 @@
 <?php require_once "../nav.php"; ?>
 
 <div class="container mt-5">
-    <form action="" class="mt-5" method="post">
+    <div>
         <span class="fs-3 opacity-25">Create Recipe</span>
 
         <!-- Name input -->
@@ -140,9 +140,9 @@
 
         <!-- Submit button -->
         <div class="d-flex">
-            <button type="submit" class="btn btn-primary mb-4 mt-5">Create a New Recipe</button>
+            <button onclick=createRecipe() type="submit" class="btn btn-primary mb-4 mt-5">Create a New Recipe</button>
         </div>
-    </form>
+</div>
 </div>
 
 <script>
@@ -208,6 +208,6 @@
         });
     });
 </script>
-
+<script src="create.js" type="text/javascript"></script>
 
 <?php require "../../required_pages/footer.php"; ?>

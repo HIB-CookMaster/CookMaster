@@ -161,7 +161,7 @@ function checkInfos() {
 }
 
 // publishBtn - send JSON to PHP
-publishBtn.addEventListener("click", function () {
+publishBtn.addEventListener("click", async function () {
   if (!confirm("Do you want to publish this certification ?")) {
     return;
   }
@@ -256,12 +256,16 @@ publishBtn.addEventListener("click", function () {
       chapters: chapterCounter,
     };
 
-    let formData = new FormData();
+
+    let formData = {} //new FormData();
     // Ajout de l'image de la miniature à formData
 
     if (thumbnail.files && thumbnail.files[0]) {
-      formData.append("thumbnail", thumbnail.files[0]);
+      //formData.append("thumbnail", thumbnail.files[0]);
+      formData["thumbnail"] = thumbnail.files[0];
     }
+
+    formData["file"] = [];
 
     // Ajout des autres fichiers à formData
     elements.forEach(function (element) {
@@ -269,23 +273,38 @@ publishBtn.addEventListener("click", function () {
         element.getAttribute("data-isThumbnail") === "false" &&
         element.tagName.toLowerCase() === "input"
       ) {
-        formData.append("file_" + fileCount, element.files[0]);
+        //formData.append("file_" + fileCount, element.files[0]);
+        formData["file"].append(element.files[0])
         fileCount++;
       }
     });
 
-    formData.append("jsonData", JSON.stringify(chapters));
-    formData.append("infos", JSON.stringify(infos));
+    //formData.append("jsonData", JSON.stringify(chapters));
+    formData["jsonData"] = chapters;
+    //formData.append("infos", JSON.stringify(infos));
+    formData["infos"] = infos;
 
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "/CookMaster/src/admin/certification/save.php", true);
-    xhr.send(formData);
+    console.log(JSON.stringify(formData));
+
+    /*let xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://51.75.143.35:8081/certifiantes", true);
+    xhr.send(JSON.stringify(formData));
 
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         console.log(xhr.responseText);
       }
-    };
+    };*/
+
+    console.log('fetching')
+    await fetch("http://51.75.143.35:8081/certifiantes", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
   }
 });
 
