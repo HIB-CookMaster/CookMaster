@@ -1,6 +1,9 @@
 <?php require_once "../required_pages/header.php" ?>
 <?php require_once "../required_pages/navbar.php" ?>
 
+<?php
+session_start();
+?>
 
 <div class="container mt-5">
     <div class="row w-100 ">
@@ -14,17 +17,17 @@
             </span>
             <h2 class="fw-bold mt-5 fs-5">Welcome back !</h2>
             <p class="fs-little">Learn with the best</p>
-            <form class="mt-5" action="">
+            <form class="mt-5" action="checklogin.php" method="post">
                 <div class="d-flex mb-3">
                     <div class="px-2 w-100">
                         <label for="email" class="form-label fw-bold fs-little">Email</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="email" name="login" aria-describedby="emailHelp">
                     </div>
                 </div>
                 <div class="d-flex mb-3">
                     <div class="px-2 w-100">
                         <label for="password" class="form-label fw-bold fs-little">Password</label>
-                        <input type="password" class="form-control" id="password" aria-describedby="passwordHelp">
+                        <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp">
                     </div>
                 </div>
 

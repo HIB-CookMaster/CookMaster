@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $path = $_SERVER['PHP_SELF'];
 
 $filename = basename($path, ".php");

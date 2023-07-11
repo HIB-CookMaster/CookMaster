@@ -1,5 +1,8 @@
+<?php session_start(); ?>
+
 <?php require_once "./src/required_pages/header.php" ?>
 <?php require_once "./src/required_pages/navbar.php" ?>
+
 
 <div class="container mt-5">
     <div class="container-fluid">

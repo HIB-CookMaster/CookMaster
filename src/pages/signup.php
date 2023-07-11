@@ -12,36 +12,36 @@
             </div>
             <h2 class="fw-bold mt-5 fs-5">Create account</h2>
             <p class="fs-little">Learn with the best</p>
-            <form class="mt-5" action="">
+            <form class="mt-5" action="register.php" method="post">
                 <div class="d-flex mb-3">
                     <div class="px-2 w-100">
                         <label for="first-name" class="form-label fw-bold fs-little">First name</label>
-                        <input type="text" class="form-control" id="first-name" aria-describedby="firstNameHelp">
+                        <input type="text" class="form-control" id="first-name" name="first-name" aria-describedby="firstNameHelp">
                     </div>
                     <div class="px-2 w-100">
                         <label for="last-name" class="form-label fw-bold fs-little">Last name</label>
-                        <input type="text" class="form-control" id="last-name" aria-describedby="lastNameHelp">
+                        <input type="text" class="form-control" id="last-name" name="last-name" aria-describedby="lastNameHelp">
                     </div>
                 </div>
                 <div class="d-flex mb-3">
                     <div class="px-2 w-100">
                         <label for="email" class="form-label fw-bold fs-little">Email</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
                     </div>
                     <div class="px-2 w-100">
                         <label for="birthday" class="form-label fw-bold fs-little">Date of birth</label>
-                        <input type="date" class="form-control" id="birthday" aria-describedby="birthdayHelp">
+                        <input type="date" class="form-control" id="birthday" name="birthday" aria-describedby="birthdayHelp">
                     </div>
                 </div>
 
                 <div class="d-flex mb-3">
                     <div class="px-2 w-100">
                         <label for="password" class="form-label fw-bold fs-little">Password</label>
-                        <input type="password" class="form-control" id="password" aria-describedby="passwordHelp">
+                        <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp">
                     </div>
                     <div class="px-2 w-100">
                         <label for="password2" class="form-label fw-bold fs-little">Confirm password</label>
-                        <input type="password" class="form-control" id="password2" aria-describedby="password2Help">
+                        <input type="password" class="form-control" id="password2" name="password2" aria-describedby="password2Help">
                     </div>
                 </div>
                 <div class="mb-3 form-check">

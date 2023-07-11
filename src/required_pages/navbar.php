@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 // Utilise la variable superglobale $_SERVER pour obtenir le chemin du script en cours d'exécution
 $path = $_SERVER['PHP_SELF'];
 
@@ -81,28 +84,36 @@ function checkFileName($filename)
                                       echo "text-light";
                                     } ?>" href="/CookMaster/src/pages/subscription.php">Subscription</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link mx-3 <?php if (!checkFileName($filename)) {
-                                      echo "text-light";
-                                    } ?>" href="/CookMaster/src/admin/admin.php">Admin</a>
-          </li>
+          <?php if($_SESSION['logged_in'] && $_SESSION['power'] == '3') { ?>
+            <li class="nav-item">
+              <a class="nav-link mx-3 <?php if (!checkFileName($filename)) {
+                                        echo "text-light";
+                                      } ?>" href="/CookMaster/src/admin/admin.php">Admin</a>
+            </li>
+          <?php } ?>
         </ul>
 
         <!-- Disconnected -->
+        
         <ul class="navbar-nav">
+        <?php if(!$_SESSION['logged_in']) { ?>
           <li class="nav-item">
             <a class="nav-link bg-green text-light" href="/CookMaster/src/pages/contact.php">Contact us</a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link <?php if (!checkFileName($filename)) {
                                   echo "text-light";
                                 } ?>" href="/CookMaster/src/pages/signup.php"><i class="fa-solid fa-right-to-bracket me-2"></i>Sign up</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link <?php if (!checkFileName($filename)) {
-                                  echo "text-light";
-                                } ?>" href="/CookMaster/src/pages/login.php"><i class="fa-regular fa-user me-2"></i>Login</a>
-          </li>
+
+            
+            <li class="nav-item">
+              <a class="nav-link <?php if (!checkFileName($filename)) {
+                                    echo "text-light";
+                                  } ?>" href="/CookMaster/src/pages/login.php"><i class="fa-regular fa-user me-2"></i>Login</a>
+            </li>
+          <?php } ?>
 
           <li class="nav-item">
             <button class="btn btn-primary shadow-0 border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -116,7 +127,7 @@ function checkFileName($filename)
 
           <!-- Disconnected -->
 
-
+        <?php if($_SESSION['logged_in']) { ?>                                  
           <!-- Connected -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
@@ -130,10 +141,11 @@ function checkFileName($filename)
                 <a class="dropdown-item" href="#">My cart</a>
               </li>
               <li>
-                <a class="dropdown-item" href="#">Logout</a>
+                <a class="dropdown-item" href="/CookMaster/src/required_pages/disconnect.php">Logout</a>
               </li>
             </ul>
           </li>
+          <?php } ?>
           <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle hidden-arrow" type="button" id="dropdownMenuButton1" data-mdb-toggle="dropdown" aria-expanded="false">
               <i class="fa-regular fa-bell"></i>
