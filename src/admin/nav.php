@@ -76,6 +76,9 @@
                             <li>
                                 <a class="dropdown-item" href="/CookMaster/src/admin/uploads/uploads.php">Upload files</a>
                             </li>
+                            <li>
+                                <a class="dropdown-item" href="/CookMaster/src/admin/uploads/list.php">List all files</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
