@@ -45,7 +45,7 @@ const createRecipe = async () => {
     console.log('Posting')
     data = JSON.stringify(data, null, 4);
     // POST request using fetch()s
-    await fetch(`http://51.75.143.35:8081/recipes`, {
+    fetch(`http://51.75.143.35:8081/recipes`, {
         // Adding method type
         method: "POST",
         headers: {
@@ -57,4 +57,27 @@ const createRecipe = async () => {
     });
     console.log("Posted");
     console.log(data);
+
+    console.log('Posting image')
+
+    let img = document.getElementById('image').files[0];
+    console.log(img)
+
+    let imgdata = new FormData()
+    imgdata.append('file', img)
+    imgdata.append('user', 'me')
+
+    console.log('Posting image')
+    fetch(`http://51.75.143.35:8081/recipes/postimg`, {
+        // Adding method type
+        method: "POST",
+        headers: {
+            headers: { 
+            'Content-Type': 'multipart/form-data',
+            'Access-Control-Allow-Origin': '*'
+        },
+        // Adding body or contents to send
+        body: imgdata
+    }});
 }
+
