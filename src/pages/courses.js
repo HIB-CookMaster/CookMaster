@@ -16,7 +16,11 @@ const renderRecipe = (recipes) => {
 
     let img = document.createElement('img');
     img.className = 'img-fluid rounded-start object-fit-cover rounded-2 h-100';
-    img.src = recipes.image  > 0 ? recipes.image : 'https://via.placeholder.com/300x200';
+    console.log(recipes.image)
+    img.src = `http://51.75.143.35/CookMaster/` + recipes.image;
+    img.onerror = () => {
+        img.src = 'https://via.placeholder.com/300x200';
+    }
 
     let body = document.createElement('div');
     body.className = 'col-md-8 px-2';
