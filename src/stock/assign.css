@@ -1,0 +1,24 @@
+#maincont {
+    display: flex;
+}
+
+#local_cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.local {
+    height : 15vh;
+    margin: 10px;
+    border: 0.1px solid white;
+}
+
+.tool {
+    display: flex;
+}
+
+.tool_cont {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}

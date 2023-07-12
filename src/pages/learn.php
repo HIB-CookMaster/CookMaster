@@ -2,8 +2,21 @@
 
 use function PHPSTORM_META\type;
 
-require "../required_pages/header.php"; ?>
-<?php require "../required_pages/navbar.php"; ?>
+require "../required_pages/header.php"; 
+require "../required_pages/navbar.php"; 
+
+require_once "../helpers/dbhelper.php";
+
+$con = getDatabaseConnection();
+
+$query = $con->prepare("SELECT id FROM USERS WHERE email = :email");
+$query->execute([":email" =>  $_SESSION['email']]);
+$result = $query->fetch(PDO::FETCH_ASSOC);
+$id = (int) $result['id'];
+
+
+
+?>
 
 <style>
     .custom-btn {
@@ -240,6 +253,16 @@ if ($jsonFile !== null) {
     </div>
 </div>
 
+<?php 
+
+$certName = $json->infos->certifName;
+//Replace " " by "_" and remove uppercase
+$certName = str_replace(" ", "_", $certName);
+$certName = strtolower($certName);
+
+
+?>
+
 <script>
     document.getElementById('submitBtn').addEventListener('click', function() {
         let unanswered = false;
@@ -265,7 +288,8 @@ if ($jsonFile !== null) {
         if (unanswered) {
             alert('Veuillez répondre à toutes les questions.');
         } else if (allCorrect) {
-            alert('Félicitations, toutes les réponses sont correctes!');
+            // redirection to ./quizzSuccess
+            window.location.href = './quizzSuccess.php?certif_name=<?php echo $json->infos->certifName ?>&id_user=<?php echo $id ?>';
         } else {
             alert('Certaines réponses sont incorrectes. Veuillez réessayer.');
         }

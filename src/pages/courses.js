@@ -7,6 +7,10 @@ let recipes_per_pages = 5;
 const renderRecipe = (recipes) => {
     let wrapper = document.createElement('div');
     wrapper.className = 'card mb-3 border-0 mt-3 pointer shadow-none';
+    wrapper.addEventListener("click", () => {
+        let id = recipes.id;
+        window.location.href = "./course.php?id=" + id;
+    })
 
     let container = document.createElement('div');
     container.className = 'row g-0';
@@ -17,7 +21,7 @@ const renderRecipe = (recipes) => {
     let img = document.createElement('img');
     img.className = 'img-fluid rounded-start object-fit-cover rounded-2 h-100';
     console.log(recipes.image)
-    img.src = `http://51.75.143.35/CookMaster/` + recipes.image;
+    img.src = `http://51.75.143.35/CookMaster/assets/images/recipes/` + recipes.image;
     img.onerror = () => {
         img.src = 'https://via.placeholder.com/300x200';
     }

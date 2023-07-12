@@ -1,1 +1,15 @@
-{"id":1,"thumbnail":"event.png","name":"Canard","startDate":"04\/08\/1998","startTime":"12:00","endDate":"05\/08\/1998","endTime":"12:00","eventPrice":"200","nbPers":"5","location":{"localName":"18 rue des Blancs Manteaux, 75004 Paris ","roomNumber":" Room 2"}}
+{
+    "id": 1,
+    "thumbnail": "event.png",
+    "name": "Le Canard Foodieland",
+    "startDate": "12\/07\/2023",
+    "startTime": "12:00",
+    "endDate": "12\/07\/2023",
+    "endTime": "16:00",
+    "eventPrice": "200",
+    "nbPers": "5",
+    "location": {
+        "localName": "18 rue des Blancs Manteaux, 75004 Paris ",
+        "roomNumber": " Room 2"
+    }
+}

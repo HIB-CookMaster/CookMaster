@@ -1,41 +1,33 @@
-<?php return array(
-    'root' => array(
-        'name' => 'azark/cook-master',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '1df0c05b274cfc7a895b64fb97dc315e8ea24b28',
-        'type' => 'library',
-        'install_path' => __DIR__ . '/../../',
-        'aliases' => array(),
-        'dev' => true,
+<?php return array (
+  'root' => 
+  array (
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
+    'aliases' => 
+    array (
     ),
-    'versions' => array(
-        'azark/cook-master' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '1df0c05b274cfc7a895b64fb97dc315e8ea24b28',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'phpmailer/phpmailer' => array(
-            'pretty_version' => 'v6.8.0',
-            'version' => '6.8.0.0',
-            'reference' => 'df16b615e371d81fb79e506277faea67a1be18f1',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../phpmailer/phpmailer',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'stripe/stripe-php' => array(
-            'pretty_version' => 'v10.15.0',
-            'version' => '10.15.0.0',
-            'reference' => 'd0e48cc85e1aa54cbff3644d1979a4a4c3fdd7bf',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../stripe/stripe-php',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
+    'reference' => '019c6af65178901b184db21606cb17ab80d21d1d',
+    'name' => '__root__',
+  ),
+  'versions' => 
+  array (
+    '__root__' => 
+    array (
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '019c6af65178901b184db21606cb17ab80d21d1d',
     ),
+    'stripe/stripe-php' => 
+    array (
+      'pretty_version' => 'v10.16.0',
+      'version' => '10.16.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ea863a92102a8e8dbdeddf79b4535c355ec62d91',
+    ),
+  ),
 );

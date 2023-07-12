@@ -15,6 +15,7 @@ const make = async () => {
 
     let save_button = document.getElementById('save');
     save_button.onclick = async () => {
+        console.log(values)
         await fetch('http://51.75.143.35/CookMaster/src/stock/stocksave.php', {
             method: "POST",
             headers: {
@@ -52,7 +53,6 @@ const make = async () => {
         buttonPlus.onclick = () => {
             values[keys[id]] += 1;
             console.log('added one' + keys[cont.getAttribute('toolid')]);
-            console.log(keys);
             
             renderList();
         }
@@ -98,4 +98,5 @@ const make = async () => {
     renderList();
 }
 
+console.log('started')
 make();

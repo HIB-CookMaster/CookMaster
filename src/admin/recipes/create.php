@@ -42,11 +42,54 @@
             <label class="form-label" for="type">Recipe Type (Exemple : Chicken)</label>
         </div>
 
-        <label class="form-label" for="video">Recipe Video</label>
-        <input type="file" class="form-control" id="video" name="video" />
+        <div>
+    <span class="fs-6">Recipe video</span>
+    <select id="video" name="video">
+        <?php
+        $directory = "../../../assets/videos/recipes/";
+        $videos = glob($directory . "*.{mp4,avi,mov}", GLOB_BRACE);
+        foreach ($videos as $video) {
+            $filename = basename($video);
+            echo '<option value="' . $filename . '">' . $filename . '</option>';
+        }
+        ?>
+    </select>
+    <video id="videoPreview" width="320" height="240" controls>
+        <source src="../../../assets/videos/recipes/" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </div>
 
-        <label class="form-label mt-3" for="image">Recipe Image</label>
-        <input type="file" class="form-control" id="image" name="image" />
+    <div class="mt-3">
+        <span class="fs-6">Recipe thumbnail</span>
+        <select id="image" name="image">
+            <?php
+            $directory = "../../../assets/images/recipes/";
+            $images = glob($directory . "*.{jpg,jpeg,gif,png,bmp}", GLOB_BRACE);
+            foreach ($images as $image) {
+                $filename = basename($image);
+                echo '<option value="' . $filename . '">' . $filename . '</option>';
+            }
+            ?>
+        </select>
+        <img id="imagePreview" src="../../../assets/images/events/recipes/" alt="Image Preview" width="320" height="240">
+    </div>
+
+    <script>
+        var videoSelect = document.getElementById('video');
+        var videoPreview = document.getElementById('videoPreview');
+        videoPreview.src = '../../../assets/videos/recipes/' + videoSelect.value;
+        videoSelect.addEventListener('change', function() {
+            videoPreview.src = '../../../assets/videos/recipes/' + videoSelect.value;
+        });
+
+        var imageSelect = document.getElementById('image');
+        var imagePreview = document.getElementById('imagePreview');
+        imagePreview.src = '../../../assets/images/recipes/' + imageSelect.value;
+        imageSelect.addEventListener('change', function() {
+            imagePreview.src = '../../../assets/images/recipes/' + imageSelect.value;
+        });
+    </script>
 
         <!-- Description input -->
         <div class="form-outline mb-4 mt-4">
@@ -207,6 +250,9 @@
             recipes.removeChild(inputDiv);
         });
     });
+
+
+    
 </script>
 <script src="create.js" type="text/javascript"></script>
 

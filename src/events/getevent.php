@@ -14,6 +14,7 @@ if(!isset($_GET['id'])) {
 
     // Returns the array
     echo json_encode($json);
+    die();
 }
 
 foreach($files as $file) {

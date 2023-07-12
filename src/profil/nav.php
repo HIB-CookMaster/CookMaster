@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 
 $path = $_SERVER['PHP_SELF'];
 
@@ -17,6 +16,7 @@ $navArray = [
     "orders" => "Orders",//fa-shopping-cart
     "address" => "Address",//fa-map-marker-alt
     "subscriptions" => "Subscription",//fa-credit-card
+    "certifications" => "Certifications",//fa-graduation-cap
     "account-details" => "Account Details",//fa-user-cog
     "logout" => "Logout"//fa-sign-out-alt
 ];
@@ -26,6 +26,7 @@ $iconArray = [
     "orders" => "fa-shopping-cart",
     "address" => "fa-map-marker-alt",
     "subscriptions" => "fa-credit-card",
+    "certifications" => "fa-graduation-cap",
     "account-details" => "fa-user-cog",
     "logout" => "fa-sign-out-alt"
 ]

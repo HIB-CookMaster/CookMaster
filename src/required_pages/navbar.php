@@ -16,7 +16,7 @@ function checkFileName($filename)
     $filename == "course" || $filename == "learn" || $filename == "myRecipes" ||
     $filename == "orderToEat" || $filename == "index" || $filename == "courses" ||
     $filename == "signup" || $filename == "login" || $filename == "events" ||
-    $filename == "subscription" || $filename == "admin" || $filename == "joinEvent"
+    $filename == "subscription"  || $filename == "joinEvent" 
   ) {
     return true;
   } else {
@@ -64,20 +64,11 @@ function checkFileName($filename)
                                       echo "text-light";
                                     } ?>" href="/CookMaster/src/pages/events.php">Events</a>
           </li>
-          <li class="nav-item">
-            <div class="dropdown">
-              <a class="dropdown-toggle nav-link mx-3 <?php if (!checkFileName($filename)) {
-                                                        echo "text-light";
-                                                      } ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Services
-              </a>
 
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Kitchen equipment</a></li>
-                <li><a class="dropdown-item" href="/CookMaster/src/pages/location.php">Location</a></li>
-                <li><a class="dropdown-item" href="/CookMaster/src/pages/orderToEat.php">Order to eat</a></li>
-              </ul>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link mx-3 <?php if (!checkFileName($filename)) {
+                                      echo "text-light";
+                                    } ?>" href="/CookMaster/src/pages/live.php">Live</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-3 <?php if (!checkFileName($filename)) {

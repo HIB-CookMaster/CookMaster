@@ -1,12 +1,57 @@
 <?php 
 
+session_start();
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+require_once "../src/helpers/dbhelper.php";
+
 $plan = $_GET['plan'];
 $start_date = $_GET['start_date'];
-$end_date = $_GET['end_date'];
 
 
+
+try {
+    $con = getDatabaseConnection();
+
+    $query = $con->prepare("SELECT id FROM USERS WHERE email = :email");
+    $query->execute([":email" =>  $_SESSION['email']]);
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+    $id = (int) $result['id'];
+
+    $query = $con->prepare("SELECT * FROM subscription WHERE id_user = :id_user");
+    $query->execute([":id_user" => $id]);
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+
+    if($result) {
+        $query = $con->prepare("UPDATE subscription SET id_subscription = :id_subscription, date_debut = :date_debut WHERE id_user = :id_user");
+        $query->execute([
+            ":id_subscription" => $plan,
+            ":date_debut" => $start_date,
+            ":id_user" => $id
+        ]);
+    } else {
+        $query = $con->prepare("INSERT INTO subscription (id_subscription, id_user, date_debut) VALUES (:id_subscription, :id_user, NOW())");
+        $query->execute([
+            ":id_subscription" => $plan,
+            ":id_user" => $id
+        ]);
+        $info = $query->errorInfo();
+
+        if ($info[2] == NULL) {
+            echo "good";
+        } else {
+            var_dump($info);
+        }
+    }
+} catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
 
 ?>
+
 
 
 <html>
