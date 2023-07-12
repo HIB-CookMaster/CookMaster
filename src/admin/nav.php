@@ -79,8 +79,30 @@
                             <li>
                                 <a class="dropdown-item" href="/CookMaster/src/admin/uploads/list.php">List all files</a>
                             </li>
+
+                            
                         </ul>
+                        
                     </li>
+
+                    <li class="nav-item me-3 me-lg-0 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-stocking"></i><span class="ms-2">Stock</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="/CookMaster/src/stock/stock.php">Edit Stock</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/CookMaster/src/stock/assign.php">Assign stock</a>
+                            </li>
+
+                            
+                        </ul>
+                        
+                    </li>
+                    
                 </ul>
             </div>
         </nav>
