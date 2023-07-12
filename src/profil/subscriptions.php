@@ -8,7 +8,20 @@
             <?php require_once "./nav.php" ?>
         </div>
         <div class="col-lg-8 mt-5">
-            
+            <!-- Starter plan -->
+            <div class="bg-cream p-3 mt-3 text-center ">
+                <span class="opacity-75 text-center">You have the Starter subscription. <br> Thank you !</span>
+                <img class="d-block mx-auto mt-3" src="../../assets/images/starter.png" alt="">
+            </div>
+
+            <!-- Master plan -->
+            <div class="bg-cream p-3 mt-3 text-center ">
+                <span class="opacity-75 text-center">You have the Master subscription. <br> Thank you !</span>
+                <img class="d-block mx-auto mt-3" src="../../assets/images/master.png" alt="">
+            </div>
+            <div class="bg-cream p-3 mt-3">
+                <span class="opacity-75">Your subscription will end in 21 days, want to change/renew your plan ? Click <a href="../pages/subscription.php">here</a> </span>
+            </div>
         </div>
     </div>
 </div>

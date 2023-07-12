@@ -214,7 +214,8 @@ if ($jsonFile !== null) {
                             <?php foreach ($json->data[0][(int) $chap]->data[$i]->answers as $answer) { ?>
                                 <li class="quizz-answer">
                                     <label>
-                                        <input type="radio" name="answer_<?php echo $i ?>" value="<?php echo $answer->answer ?>">
+                                    <?php echo $answer->correct ?>
+                                        <input type="radio" name="question<?php echo $i; ?>" data-answer="<?php echo $answer->correct ? 1 : 0 ?>" value="<?php echo $answer->answer ?>">
                                         <?php echo $answer->answer ?>
                                     </label>
                                 </li>
@@ -223,6 +224,9 @@ if ($jsonFile !== null) {
                     <?php } ?>
                 <?php } ?>
 
+                <div class="mt-3">
+                    <button type="btn" class="btn btn-primary" id="submitBtn">Submit Answers</button>
+                </div>
             </div>
 
         </div>
@@ -236,6 +240,37 @@ if ($jsonFile !== null) {
     </div>
 </div>
 
+<script>
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        let unanswered = false;
+        let allCorrect = true;
+
+        let quizzes = document.querySelectorAll('.quizz');
+        quizzes.forEach(function(quizz) {
+            // Vérifie si une réponse a été choisie
+            let checked = quizz.querySelector('input[type="radio"]:checked');
+            if (!checked) {
+                unanswered = true;
+                return;
+            }
+
+            // Vérifie si la réponse est correcte
+            let isCorrect = checked.dataset.answer === "1";
+            if (!isCorrect) {
+                allCorrect = false;
+                return;
+            }
+        });
+
+        if (unanswered) {
+            alert('Veuillez répondre à toutes les questions.');
+        } else if (allCorrect) {
+            alert('Félicitations, toutes les réponses sont correctes!');
+        } else {
+            alert('Certaines réponses sont incorrectes. Veuillez réessayer.');
+        }
+    });
+</script>
 
 
 
