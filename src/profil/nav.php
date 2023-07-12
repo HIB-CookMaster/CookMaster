@@ -16,7 +16,7 @@ $navArray = [
     "dashboard" => "Dashboard",//fa-user
     "orders" => "Orders",//fa-shopping-cart
     "address" => "Address",//fa-map-marker-alt
-    "subscription" => "Subscription",//fa-credit-card
+    "subscriptions" => "Subscription",//fa-credit-card
     "account-details" => "Account Details",//fa-user-cog
     "logout" => "Logout"//fa-sign-out-alt
 ];
@@ -25,7 +25,7 @@ $iconArray = [
     "dashboard" => "fa-user",
     "orders" => "fa-shopping-cart",
     "address" => "fa-map-marker-alt",
-    "subscription" => "fa-credit-card",
+    "subscriptions" => "fa-credit-card",
     "account-details" => "fa-user-cog",
     "logout" => "fa-sign-out-alt"
 ]
